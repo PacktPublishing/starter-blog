@@ -5,10 +5,6 @@ import Layout from '../components/layout'
 
 class BlogIndex extends React.Component {
   render() {
-    const style = {
-      background: 'red',
-      textDecoration: 'underline'
-    }
     return (
       <Layout
         title="Starter Blog"
@@ -16,7 +12,7 @@ class BlogIndex extends React.Component {
       >
         <div className="blog-container">
           <section>
-            <div className="post-summary" style={style}>
+            <div className="post-summary">
               <p>May 4th, 2019</p>
               <h2>Cheddar cheese and biscuits</h2>
               <p>Cheese and wine rubber cheese airedale cottage cheese the
