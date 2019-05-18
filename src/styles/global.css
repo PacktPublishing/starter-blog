@@ -1,0 +1,64 @@
+.app-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2em 2em 1em 2em;
+}
+
+header {
+  border-bottom: 1px solid lightgrey;
+  display: block;
+  padding: 2em 0;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+main {
+  min-height: calc(100vh - 70px);
+}
+
+footer {
+  font-size: 14px;
+  height: 50px;
+  margin-top: 1em;
+}
+
+/* ***********************************
+MEDIA QUERIES
+*********************************** */
+@media (max-width: 991px) {
+  .app-container {
+    padding: 2em 5em;
+  }
+}
+
+/* iPhone6Plus */
+@media (max-width: 414px) {
+  .app-container {
+    padding: 2em 3em;
+  }
+}
+
+/* iPhone4 */
+@media (max-width: 320px) {
+  header {
+    padding: .5em 0;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: .3em;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}

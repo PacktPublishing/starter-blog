@@ -1,0 +1,16 @@
+button {
+  background: #1d7eb5;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  padding: .5em 1em;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  background: orange;
+}
