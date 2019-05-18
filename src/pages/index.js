@@ -19,7 +19,7 @@ class BlogIndex extends React.Component {
               big cheese stinking bishop cheesecake st. agur blue cheese. Cow
               rubber cheese cheese triangles say cheese cheese on toast cheddar
               red leicester swiss. </p>
-              <button className="animated-button victoria-two">Read more</button>
+              <button>Read more</button>
             </div>
             <div className="post-summary">
               <p>May 13th, 2019</p>
