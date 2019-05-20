@@ -42,38 +42,44 @@ ___Created by Rachelle Rathbone___.
 
 **Code you won't want to type:**
 ```
- {
-    name: `description`,
-    content: metaDescription,
-  },
-  {
-    property: `og:title`,
-    content: title,
-  },
-  {
-    property: `og:description`,
-    content: metaDescription,
-  },
-  {
-    property: `og:type`,
-    content: `website`,
-  },
-  {
-    name: `twitter:card`,
-    content: `summary`,
-  },
-  {
-    name: `twitter:creator`,
-    content: `Rachelle Rathbone`,
-  },
-  {
-    name: `twitter:title`,
-    content: title,
-  },
-  {
-    name: `twitter:description`,
-    content: metaDescription,
-  }
+  htmlAttributes={{
+    lang
+  }}
+  title={title}
+  meta={[
+    {
+       name: `description`,
+       content: metaDescription,
+     },
+     {
+       property: `og:title`,
+       content: title,
+     },
+     {
+       property: `og:description`,
+       content: metaDescription,
+     },
+     {
+       property: `og:type`,
+       content: `website`,
+     },
+     {
+       name: `twitter:card`,
+       content: `summary`,
+     },
+     {
+       name: `twitter:creator`,
+       content: `Rachelle Rathbone`,
+     },
+     {
+       name: `twitter:title`,
+       content: title,
+     },
+     {
+       name: `twitter:description`,
+       content: metaDescription,
+     }
+  ].concat(meta)}
 ```
 
 **Resources:**
@@ -81,8 +87,6 @@ ___Created by Rachelle Rathbone___.
 
 ### Creating a new page and linking between pages
 **What was covered in this section:**
-* A quick recap: how linking between pages normally works in React
-* Duplicating our index page
-* Introducing Gatsby Link and linking our 2 pages
-
-**Resources:**
+* Duplicating our index page so we have a dummy second page to link to
+* Adding a temporary element on each page that we'll use to link pages
+* Importing Gatsby's link component and linking our pages

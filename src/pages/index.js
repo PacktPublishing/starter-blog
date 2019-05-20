@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 // Components
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 class BlogIndex extends React.Component {
   render() {
@@ -10,7 +12,9 @@ class BlogIndex extends React.Component {
         title="Starter Blog"
         subtitle="Built with React and Gatsby"
       >
+        <SEO title="All posts"/>
         <div className="blog-container">
+          <p>Go to <Link to="/about">About Page</Link></p>
           <section>
             <div className="post-summary">
               <p>May 4th, 2019</p>
