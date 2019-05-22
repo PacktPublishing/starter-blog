@@ -14,7 +14,6 @@ class BlogIndex extends React.Component {
       >
         <SEO title="All posts"/>
         <div className="blog-container">
-          <p>Go to <Link to="/about">About Page</Link></p>
           <section>
             <div className="post-summary">
               <p>May 4th, 2019</p>

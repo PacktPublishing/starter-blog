@@ -90,3 +90,41 @@ ___Created by Rachelle Rathbone___.
 * Duplicating our index page so we have a dummy second page to link to
 * Adding a temporary element on each page that we'll use to link pages
 * Importing Gatsby's link component and linking our pages
+
+
+## Section 2: Querying Data with GraphQL
+
+### Introduction to GraphQL
+**What was covered in this section:**
+* What GraphQL is and how we can use it in our app.
+* Introducing the GraphQL playground.
+* Writing our first GraphQL queries.
+
+### Querying data in pages with GraphQL
+**What was covered in this section:**
+- import graphql and add our query to our index file
+- pass that data into into our component and check out the data in the console
+- update some of our content to use our data
+
+**Our query from the first video:**
+```
+query metadata {
+  site {
+    siteMetadata {
+      title
+      author
+    }
+  }
+}
+```
+
+### Using the StaticQuery API
+**What was covered in this section:**
+- Attempting to use a page query inside a component
+- What is the Static Query Api?
+- Using Static Query to retrieve data directly from a component
+
+### Updating seo.js with useStaticQuery hook
+**What was covered in this section:**
+
+**Resources:**
