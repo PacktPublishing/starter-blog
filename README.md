@@ -23,6 +23,11 @@ ___Created by Rachelle Rathbone___.
 * Non-boring [lorem ipsum](https://www.shopify.com/partners/blog/79940998-15-funny-lorem-ipsum-generators-to-shake-up-your-design-mockups).
 * You might also like [bacon ipsum](https://baconipsum.com/) or [Chuck Norris ipsum](https://vincentloy.github.io/chuck_facts_ipsum/).
 
+**NOTE**: The contents of this app's .gitignore file are fairly standard and seen
+in other Gatsby starter kits and examples. When the course is over, if you choose
+to continue working with this application, it may be a good idea to remove
+anything that you don't need from this file.
+
 ### Typography and styling
 **What was covered in this section:**
 * Why we are using typography, how it's set up, and how you can make changes
@@ -33,11 +38,6 @@ ___Created by Rachelle Rathbone___.
 * [typography.js](https://www.gatsbyjs.org/docs/typography-js/)
 * Learn more about [typography](https://kyleamathews.github.io/typography.js/).
 * More on [styling](https://www.gatsbyjs.org/tutorial/part-two/#css-in-js) with Gatsby.
-
-**NOTE**: The contents of this app's .gitignore file are fairly standard and seen
-in other Gatsby starter kits and examples. When the course is over, if you choose
-to continue working with this application, it may be a good idea to remove
-anything that you don't need from this file.
 
 ### Using React Helmet to add metadata
 **What was covered in this section:**
