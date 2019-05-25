@@ -5,7 +5,7 @@ ___Created by Rachelle Rathbone___.
 - [Section 2: Querying Data with GraphQL](#section-2:)
 
 [Link Title](#markdown-header-testlink)
-[Link Title](#section2)
+[Link Title](#section2:)
 
 
 # Testlink
