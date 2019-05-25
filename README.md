@@ -108,7 +108,7 @@ ___Created by Rachelle Rathbone___.
 
 **Our query from the first video:**
 ```
-query metadata {
+query {
   site {
     siteMetadata {
       title
