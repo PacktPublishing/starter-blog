@@ -3,6 +3,7 @@ ___Created by Rachelle Rathbone___.
 **Jump Ahead:**
 - [Section 1](#Section 1: Getting Started with Gatsby JS)
 - [Section 2](#Section 2: Querying Data with GraphQL)
+- [Discord](https://discordapp.com/)
 
 ## #Section 1: Getting Started with Gatsby JS
 
