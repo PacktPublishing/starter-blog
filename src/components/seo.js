@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-<<<<<<< HEAD
 import { useStaticQuery, graphql } from 'gatsby'
 
 function SEO({ description, lang, meta, title}) {
@@ -18,11 +17,6 @@ function SEO({ description, lang, meta, title}) {
     `
   )
   const metaDescription = description || site.siteMetadata.description
-=======
-
-function SEO({ description, lang, meta, title}) {
-  const metaDescription = description
->>>>>>> section-two
 
   return (
     <Helmet
@@ -53,11 +47,7 @@ function SEO({ description, lang, meta, title}) {
          },
          {
            name: `twitter:creator`,
-<<<<<<< HEAD
            content: site.siteMetadata.author,
-=======
-           content: `Rachelle Rathbone`,
->>>>>>> section-two
          },
          {
            name: `twitter:title`,
