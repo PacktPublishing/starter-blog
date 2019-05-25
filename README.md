@@ -1,7 +1,10 @@
 # Starter Blog
 ___Created by Rachelle Rathbone___.
+**Jump Ahead:**
+- [Section 1](#Section 1: Getting Started with Gatsby JS)
+- [Section 2](#Section 2: Querying Data with GraphQL)
 
-## Section 1: Getting Started with Gatsby JS
+## #Section 1: Getting Started with Gatsby JS
 
 ### What is GatsbyJS?
 **What was covered in this section:**
@@ -97,7 +100,7 @@ anything that you don't need from this file.
 * Importing Gatsby's link component and linking our pages
 
 
-## Section 2: Querying Data with GraphQL
+## #Section 2: Querying Data with GraphQL
 
 ### Introduction to GraphQL
 **What was covered in this section:**
@@ -107,7 +110,7 @@ anything that you don't need from this file.
 
 ### Querying data in pages with GraphQL
 **What was covered in this section:**
-- import graphql and add our query to our index file
+- import GraphQL and add our query to our index file
 - pass that data into into our component and check out the data in the console
 - update some of our content to use our data
 
@@ -131,5 +134,6 @@ query {
 
 ### Updating seo.js with useStaticQuery hook
 **What was covered in this section:**
-
-**Resources:**
+- Comparing the StaticQuery component to the useStaticQuery hook.
+- Configuring seo.js with our useStaticQuery hook
+- Updating seo.js to consume data from our GraphQL query.
