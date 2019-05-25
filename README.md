@@ -1,11 +1,9 @@
 # Starter Blog
 ___Created by Rachelle Rathbone___.
+
 **Jump Ahead:**
 - [Section 1: Getting Started with Gatsby JS](#sectionone)
 - [Section 2: Querying Data with GraphQL](#sectiontwo)
-
-[Link Title](#sectiontwo:-getting-started)
-
 
 ## #SectionOne
 ## Getting Started with Gatsby JS
