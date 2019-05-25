@@ -10,7 +10,7 @@ ___Created by Rachelle Rathbone___.
 * The Gatsby community and noteworthy people to follow on Twitter.
 
 **Resources:**
-* Bonus: I ran out of time to cover this in the video but Discord is a great app to download and use to connect with the greater Gatsby community. Download [Discord](https://discordapp.com/), click the plus button in the left panel, then 'Join a server', and type in 'reactiflux'. Once you've joined this server, scroll through the list on the left until you reach 'Tools' then click on the #gatsby tag. This is a great place for you to come if you ever get stuck and are looking for help.
+* Download [Discord](https://discordapp.com/), click the plus button in the left panel, then 'Join a server', and type in 'reactiflux'. Once you've joined this server, scroll through the list on the left until you reach 'Tools' then click on the #gatsby tag. This is a great place for you to come if you ever get stuck and are looking for help.
 
 ### Installing Gatsby and cloning our Gatsby project
 **What was covered in this section:**
