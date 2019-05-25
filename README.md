@@ -2,7 +2,7 @@
 ___Created by Rachelle Rathbone___.
 **Jump Ahead:**
 - [Section1: Getting Started with Gatsby JS](#section-1:Getting-Started-with-Gatsby-JS)
-- [Section 2: Querying Data with GraphQL](#section-2:)
+- [Section 2: Querying Data with GraphQL](#section)
 
 [Section 2: Querying Data with GraphQL](#test:)
 
@@ -103,7 +103,7 @@ anything that you don't need from this file.
 * Importing Gatsby's link component and linking our pages
 
 # test
-## # Section2: 
+## # Section 
 Querying Data with GraphQL
 
 ### Introduction to GraphQL
