@@ -3,12 +3,10 @@ ___Created by Rachelle Rathbone___.
 **Jump Ahead:**
 - [Section1: Getting Started with Gatsby JS](#section-1:Getting-Started-with-Gatsby-JS)
 - [Section 2: Querying Data with GraphQL](#section-2:)
-- [Discord](https://discordapp.com/)
-[Link Title](#markdown-header-testlink)
-[Link Title](#testlink)
 
-some text
-........
+[Link Title](#markdown-header-testlink)
+[Link Title](#section2)
+
 
 # Testlink
 some text
@@ -109,7 +107,7 @@ anything that you don't need from this file.
 * Importing Gatsby's link component and linking our pages
 
 
-## #Section 2: Querying Data with GraphQL
+## #Section2: Querying Data with GraphQL
 
 ### Introduction to GraphQL
 **What was covered in this section:**
