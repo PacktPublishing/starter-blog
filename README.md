@@ -10,7 +10,7 @@ ___Created by Rachelle Rathbone___.
 * The Gatsby community and noteworthy people to follow on Twitter.
 
 **Resources:**
-* Bonus: I ran out of time to cover this in the video but Discord is a great app to download and use to connect with the greater Gatsby community. Download [Discord](https://discordapp.com/), click the plus button in the left panel, then 'Join a server', and type in 'reactiflux'. Once you've joined this server, scroll through the list on the left until you reach 'Tools' then click on the #gatsby tag. This is a great place for you to come if you ever get stuck and are looking for help.
+* Download [Discord](https://discordapp.com/), click the plus button in the left panel, then 'Join a server', and type in 'reactiflux'. Once you've joined this server, scroll through the list on the left until you reach 'Tools' then click on the #gatsby tag. This is a great place for you to come if you ever get stuck and are looking for help.
 
 ### Installing Gatsby and cloning our Gatsby project
 **What was covered in this section:**
@@ -22,6 +22,11 @@ ___Created by Rachelle Rathbone___.
 * Something went wrong when trying to install Gatsby globally? Maybe you missed an important [prerequisite](https://www.gatsbyjs.org/tutorial/part-zero/)
 * Non-boring [lorem ipsum](https://www.shopify.com/partners/blog/79940998-15-funny-lorem-ipsum-generators-to-shake-up-your-design-mockups).
 * You might also like [bacon ipsum](https://baconipsum.com/) or [Chuck Norris ipsum](https://vincentloy.github.io/chuck_facts_ipsum/).
+
+**NOTE**: The contents of this app's .gitignore file are fairly standard and seen
+in other Gatsby starter kits and examples. When the course is over, if you choose
+to continue working with this application, it may be a good idea to remove
+anything that you don't need from this file.
 
 ### Typography and styling
 **What was covered in this section:**
