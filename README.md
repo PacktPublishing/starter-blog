@@ -1,8 +1,8 @@
 # Starter Blog
 ___Created by Rachelle Rathbone___.
 **Jump Ahead:**
-- [Section1: Getting Started with Gatsby JS](#sectionone)
-- [Section 2: Querying Data with GraphQL](#section)
+- [Section 1: Getting Started with Gatsby JS](#sectionone)
+- [Section 2: Querying Data with GraphQL](#sectiontwo)
 
 [Link Title](#sectiontwo:-getting-started)
 
@@ -103,9 +103,9 @@ anything that you don't need from this file.
 * Adding a temporary element on each page that we'll use to link pages
 * Importing Gatsby's link component and linking our pages
 
-# test
-## # Section 
-Querying Data with GraphQL
+
+## #SectionTwo
+## Querying Data with GraphQL
 
 ### Introduction to GraphQL
 **What was covered in this section:**
