@@ -4,6 +4,14 @@ ___Created by Rachelle Rathbone___.
 - [Section1: Getting Started with Gatsby JS](#section-1:Getting-Started-with-Gatsby-JS)
 - [Section 2: Querying Data with GraphQL](#section-2:)
 - [Discord](https://discordapp.com/)
+[Link Title](#markdown-header-testlink)
+[Link Title](#testlink)
+
+some text
+........
+
+# Testlink
+some text
 
 ## #Section 1: Getting Started with Gatsby JS
 
