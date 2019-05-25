@@ -4,7 +4,13 @@ ___Created by Rachelle Rathbone___.
 - [Section1: Getting Started with Gatsby JS](#section-1:Getting-Started-with-Gatsby-JS)
 - [Section 2: Querying Data with GraphQL](#section)
 
-[Section 2: Querying Data with GraphQL](#test:)
+[Link Title](#sectiontwo)
+
+some text
+........
+
+# SectionTwo
+some text
 
 
 ## # Section 1: Getting Started with Gatsby JS
