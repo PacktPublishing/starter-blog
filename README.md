@@ -1,11 +1,11 @@
 # Starter Blog
 ___Created by Rachelle Rathbone___.
 **Jump Ahead:**
-- [Section 1](#Section 1: Getting Started with Gatsby JS)
-- [Section 2](#Section 2: Querying Data with GraphQL)
+- [Section1](#Section1:)
+- [Section2](#Section2:)
 - [Discord](https://discordapp.com/)
 
-## #Section 1: Getting Started with Gatsby JS
+## #Section1: Getting Started with Gatsby JS
 
 ### What is GatsbyJS?
 **What was covered in this section:**
@@ -101,7 +101,7 @@ anything that you don't need from this file.
 * Importing Gatsby's link component and linking our pages
 
 
-## #Section 2: Querying Data with GraphQL
+## #Section2: Querying Data with GraphQL
 
 ### Introduction to GraphQL
 **What was covered in this section:**
