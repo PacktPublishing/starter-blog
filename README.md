@@ -1,8 +1,8 @@
 # Starter Blog
 ___Created by Rachelle Rathbone___.
 **Jump Ahead:**
-- [Section1](#Section1:)
-- [Section2](#Section2:)
+- [Section 1](#Section-1:)
+- [Section 2](#Section-2:)
 - [Discord](https://discordapp.com/)
 
 ## #Section1: Getting Started with Gatsby JS
