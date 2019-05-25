@@ -7,7 +7,7 @@ ___Created by Rachelle Rathbone___.
 [Link Title](#sectiontwo:-getting-started)
 
 
-## #SectionOne
+## # SectionOne
 ## Getting Started with Gatsby JS
 
 ### What is GatsbyJS?
@@ -104,7 +104,7 @@ anything that you don't need from this file.
 * Importing Gatsby's link component and linking our pages
 
 
-## #SectionTwo
+## # SectionTwo
 ## Querying Data with GraphQL
 
 ### Introduction to GraphQL
