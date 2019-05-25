@@ -34,6 +34,11 @@ ___Created by Rachelle Rathbone___.
 * Learn more about [typography](https://kyleamathews.github.io/typography.js/).
 * More on [styling](https://www.gatsbyjs.org/tutorial/part-two/#css-in-js) with Gatsby.
 
+**NOTE**: The contents of this app's .gitignore file are fairly standard and seen
+in other Gatsby starter kits and examples. When the course is over, if you choose
+to continue working with this application, it may be a good idea to remove
+anything that you don't need from this file.
+
 ### Using React Helmet to add metadata
 **What was covered in this section:**
 * Installing the gatsby-plugin-react-helmet and discussing why we need it.
