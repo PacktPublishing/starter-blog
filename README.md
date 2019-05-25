@@ -103,7 +103,7 @@ anything that you don't need from this file.
 * Importing Gatsby's link component and linking our pages
 
 # test
-## #Section2: 
+## # Section2: 
 Querying Data with GraphQL
 
 ### Introduction to GraphQL
