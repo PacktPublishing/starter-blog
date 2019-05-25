@@ -9,7 +9,7 @@ ___Created by Rachelle Rathbone___.
 some text
 ........
 
-# SectionTwo
+# SectionTwo: Getting Started
 some text
 
 
