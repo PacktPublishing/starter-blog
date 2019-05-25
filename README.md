@@ -102,7 +102,7 @@ anything that you don't need from this file.
 * Adding a temporary element on each page that we'll use to link pages
 * Importing Gatsby's link component and linking our pages
 
-#test
+# test
 ## #Section2: Querying Data with GraphQL
 
 ### Introduction to GraphQL
