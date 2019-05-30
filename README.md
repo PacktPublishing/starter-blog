@@ -142,7 +142,6 @@ query {
 - Configuring seo.js with our useStaticQuery hook
 - Updating seo.js to consume data from our GraphQL query.
 
-
 ## #SectionThree
 ### Source Plugins
 **What was covered in this section:**
@@ -156,6 +155,9 @@ query {
 - Installing our first transformer plugin and updating our config
 - Writing a GraphQL query to get the content from our markdown file
 
+**Resources**:
+- Install [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/?=transform) to parse the content of your markdown files.
+
 ### Welcome to the Gatsby Plugin Library
 **What was covered in this section:**
 - Introducing the Gatsby plugin library.
@@ -164,6 +166,9 @@ query {
 
 **Resources:**
 - [Plugin Library](https://www.gatsbyjs.org/plugins/)
+- Install [gatsby-plugin-sitemap](https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/?=sitemap) to help search engines identify the purpose of your pages.
+- Install [gatsby-plugin-google-analytics](https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/) for in-depth website analytics.
+- Install [gatsby-plugin-google-tagmanager](https://www.gatsbyjs.org/packages/gatsby-plugin-google-tagmanager/?=tagma) so you can add tracking on your site.
 
 ### Tracking Events with Plugins
 **What was covered in this section:**
@@ -176,9 +181,9 @@ query {
 
 ### Increase Your Click Rates with Social Cards
 **What was covered in this section:**
-
-**Resources:**
-
+- What social cards are used for.
+- Installing the gatsby-remark-social-cards plugin and updating our config.
+- Making some more changes to our seo.js to include social card metadata.
 
 **Options for your social card plugin config:**
 ```
