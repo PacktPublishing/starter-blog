@@ -6,6 +6,7 @@ module.exports = {
     social: {
       twitter: `coding_love`,
     },
+    siteUrl: `http://localhost:9000`
   },
   plugins: [
     {
@@ -14,6 +15,17 @@ module.exports = {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/posts`,
+        name: `blogPosts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {}
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -34,6 +46,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: ``,
+        head: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: ``,
+        includeInDevelopment: false
+      }
+    }
   ],
 }
