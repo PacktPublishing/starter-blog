@@ -85,7 +85,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: ``,
+        id: `GTM-NJ3SJD6`,
         includeInDevelopment: false
       },
     }
