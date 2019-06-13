@@ -211,9 +211,9 @@ options: {
     x: null, // Will default to xMargin
     y: null, // Will default to cardHeight - yMargin - size
   },
-  background = "#FFFFFF", // Background color for the card
-  xMargin = 24, // Edge margin used when x value is not set
-  yMargin = 24,// Edge margin used when y value is not set
+  background: "#FFFFFF", // Background color for the card
+  xMargin: 24, // Edge margin used when x value is not set
+  yMargin: 24,// Edge margin used when y value is not set
 }
 
 ```

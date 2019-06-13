@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 // Components
 import Layout from '../components/layout'
@@ -26,7 +26,9 @@ class BlogIndex extends React.Component {
               big cheese stinking bishop cheesecake st. agur blue cheese. Cow
               rubber cheese cheese triangles say cheese cheese on toast cheddar
               red leicester swiss. </p>
-              <button data-gtm="read-more">Read more</button>
+              <Link to="/cheddar-cheese">
+                <button data-gtm="read-more">Read more</button>
+              </Link>
             </div>
             <div className="post-summary">
               <p>May 13th, 2019</p>
@@ -37,7 +39,9 @@ class BlogIndex extends React.Component {
                 cheese on toast jarlsberg red leicester chalk and cheese
                 fromage.
               </p>
-              <button data-gtm="read-more">Read more</button>
+              <Link to="/toast-babybel">
+                <button data-gtm="read-more">Read more</button>
+              </Link>
             </div>
           </section>
           <aside>
