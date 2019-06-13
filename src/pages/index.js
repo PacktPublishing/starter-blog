@@ -27,7 +27,7 @@ class BlogIndex extends React.Component {
               rubber cheese cheese triangles say cheese cheese on toast cheddar
               red leicester swiss. </p>
               <Link to="/cheddar-cheese">
-                <button data-gtm="read-more">Read more</button>
+                <button>Read more</button>
               </Link>
             </div>
             <div className="post-summary">
@@ -40,7 +40,7 @@ class BlogIndex extends React.Component {
                 fromage.
               </p>
               <Link to="/toast-babybel">
-                <button data-gtm="read-more">Read more</button>
+                <button>Read more</button>
               </Link>
             </div>
           </section>
