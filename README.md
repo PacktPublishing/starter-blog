@@ -293,20 +293,22 @@ options: {
 **What was covered in this section:**
 - Creating our first template
 - Setting up the basic skeleton that will be the blueprint for our posts
-- Importing and passing in the components we will need for our template, and temporarily adding hardcoded props
+- Importing and passing in the components we will need for our template, and
+temporarily adding hardcoded props
 
-### Working with createPage in gatsby-node.js
+### Working with the createPage API in gatsby-node.js
 **What was covered in this section:**
 - What are the Gatsby Node APIs?
 - Implementing the createPage API and adding a graphql query
 - Mapping over our data to programmatically create pages
 
 **Resources:**
+- Read all about [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/#onCreateNode) which can be used in gatsby-node.js
 
-### Adding a Page Query to Our Web App Template
+### Adding the onCreateNode API and updating our query
 **What was covered in this section:**
 **Resources:**
 
-### Using Other Sources of Data with Gatsby
+### Writing a Page Query to Our Web App Template
 **What was covered in this section:**
 **Resources:**
