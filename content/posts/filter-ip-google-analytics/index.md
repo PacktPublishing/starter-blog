@@ -1,5 +1,7 @@
 ---
 title: Filter Your IP in Google Analytics
+subtitle: Keep your analytics data clean
+description: Add one or multiple IPs to a filter in Google Analytics
 date: "2019-06-11"
 ---
 

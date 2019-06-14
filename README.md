@@ -291,10 +291,16 @@ options: {
 
 ### Building Our Web App's Post Template
 **What was covered in this section:**
-**Resources:**
+- Creating our first template
+- Setting up the basic skeleton that will be the blueprint for our posts
+- Importing and passing in the components we will need for our template, and temporarily adding hardcoded props
 
 ### Working with createPage in gatsby-node.js
 **What was covered in this section:**
+- What are the Gatsby Node APIs?
+- Implementing the createPage API and adding a graphql query
+- Mapping over our data to programmatically create pages
+
 **Resources:**
 
 ### Adding a Page Query to Our Web App Template

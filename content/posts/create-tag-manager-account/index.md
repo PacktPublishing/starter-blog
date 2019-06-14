@@ -1,5 +1,7 @@
 ---
 title: Setting Up a Tag Manager Account
+subtitle: Track Events on Your Site
+description: Learn how to set up a Google Tag Manager account
 date: "2019-06-11"
 ---
 
