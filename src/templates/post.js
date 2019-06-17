@@ -21,27 +21,27 @@ class PostTemplate extends React.Component {
           title={title}
           description={description || post.excerpt}
         />
-        <section>
-        <p>
-          {date}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <section className="posts">
+          <p className="date">
+            {date}
+          </p>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <ul>
+            <li className="post-navigation">
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li className="post-navigation">
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
         </section>
       </Layout>
     )
