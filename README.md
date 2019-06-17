@@ -321,14 +321,14 @@ temporarily adding hardcoded props
 **Code for our previous and next links:**
 ```
 <ul>
-  <li>
+  <li className="post-navigation">
     {previous && (
       <Link to={previous.fields.slug} rel="prev">
         ← {previous.frontmatter.title}
       </Link>
     )}
   </li>
-  <li>
+  <li className="post-navigation">
     {next && (
       <Link to={next.fields.slug} rel="next">
         {next.frontmatter.title} →
