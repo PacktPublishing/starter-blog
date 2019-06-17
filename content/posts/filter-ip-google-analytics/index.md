@@ -2,7 +2,7 @@
 title: Filter Your IP in Google Analytics
 subtitle: Keep your analytics data clean
 description: Add one or multiple IPs to a filter in Google Analytics
-date: "2019-06-11"
+date: 2019-06-11
 ---
 
 This is going to be a pretty brief post but the purpose of it is important. If you’ve gone to the trouble of setting up Google Analytics to monitor your website, then I’m pretty sure you don’t want noise from you visiting your own site or working on localhost to create a whole lot of noise in your Google Analytics data.

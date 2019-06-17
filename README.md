@@ -307,8 +307,33 @@ temporarily adding hardcoded props
 
 ### Adding the onCreateNode API and updating our query
 **What was covered in this section:**
-**Resources:**
+- Adding the onCreateNode API to gatsby-node.js
+- Creating previous and next variables for easier navigation on the client
+- Completing createPage and checking out our new programmatically generated pages
+
 
 ### Writing a Page Query to Our Web App Template
 **What was covered in this section:**
-**Resources:**
+- Writing a pageQuery in our template to pull in data from our markdown files
+- Replacing hard coded content with the results from our data
+- Updating our template to display our posts content using innerHTML  
+
+**Code for our previous and next links:**
+```
+<ul>
+  <li>
+    {previous && (
+      <Link to={previous.fields.slug} rel="prev">
+        ← {previous.frontmatter.title}
+      </Link>
+    )}
+  </li>
+  <li>
+    {next && (
+      <Link to={next.fields.slug} rel="next">
+        {next.frontmatter.title} →
+      </Link>
+    )}
+  </li>
+</ul>
+```

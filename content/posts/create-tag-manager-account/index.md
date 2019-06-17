@@ -2,7 +2,7 @@
 title: Setting Up a Tag Manager Account
 subtitle: Track Events on Your Site
 description: Learn how to set up a Google Tag Manager account
-date: "2019-06-11"
+date: 2019-06-11
 ---
 
 If you’ve been following my course 'Hands-On Web Development with React and GatsbyJS' then this is the post you’ll need to follow so you can set up your Tag Manager (TM) account and update your `gatsby-config` file. For those of you who aren’t following the course, this post will still be beneficial to you if you’ve never set up a Tag Manager account and are looking for some guidance. Just make sure you have already created a Google Analytics account and added the necessary tracking to your codebase.
