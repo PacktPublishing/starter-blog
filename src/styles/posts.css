@@ -1,0 +1,35 @@
+.posts {
+    margin: auto;
+    width: 65%;
+}
+
+.date {
+    color: #1d7eb5;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.posts ul:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.posts a {
+    color: #1d7eb5;
+}
+
+.posts a:hover {
+    color: orange;
+}
+
+.posts .post-navigation {
+    list-style-type: none;
+}
+
+.posts .post-navigation {
+    margin-right: 1rem;
+}
+
+.posts .post-navigation {
+    margin-left: 1rem;
+}
