@@ -19,6 +19,13 @@
   margin-bottom: 1rem;
 }
 
+.post-summary .content p {
+  color: #333;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+
 .post-summary h2 {
   margin-bottom: .5rem;
 }
