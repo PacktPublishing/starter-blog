@@ -8,8 +8,6 @@ ___Created by Rachelle Rathbone___.
 - [Section 4: Programmatically Creating Pages](#sectionfour)
 
 ## #SectionOne
-## Getting Started with Gatsby JS
-
 ### What is GatsbyJS?
 **What was covered in this section:**
 * What is GatsbyJS?
@@ -35,7 +33,7 @@ in other Gatsby starter kits and examples. When the course is over, if you choos
 to continue working with this application, it may be a good idea to remove
 anything that you don't need from this file.
 
-### Typography and styling
+### Overview of typography and styling
 **What was covered in this section:**
 * Why we are using typography, how it's set up, and how you can make changes
 * How we'll style our application
@@ -48,9 +46,9 @@ anything that you don't need from this file.
 
 ### Using React Helmet to add metadata
 **What was covered in this section:**
-* Installing the gatsby-plugin-react-helmet and discussing why we need it.
+* Installing gatsby-plugin-react-helmet and discussing why we need it.
 * Creating out seo.js file and adding some basic content
-* Add our new SEO component to our blog
+* Adding our new SEO component to our blog
 
 **Code you won't want to type:**
 ```
@@ -99,10 +97,9 @@ anything that you don't need from this file.
 
 ### Creating a new page and linking between pages
 **What was covered in this section:**
-* Duplicating our index page so we have a dummy second page to link to
+* Duplicating our index page so we have a dummy page to link to
 * Adding a temporary element on each page that we'll use to link pages
 * Importing Gatsby's link component and linking our pages
-
 
 ## #SectionTwo
 ## Querying Data with GraphQL
@@ -224,9 +221,9 @@ options: {
 
 ### Making Our Post Markdown Files
 **What was covered in this section:**
-- installing some plugins to support markdown files
-- looking at the markdown examples
-- adding an additional markdown file
+- Installing some plugins to support markdown files
+- Looking at the markdown examples
+- Adding an additional markdown file
 
 **Resources:**
 - Install [gatsby-remark-prismjs prismjs](https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/) to add syntax highlighting
@@ -299,7 +296,7 @@ temporarily adding hardcoded props
 ### Working with the createPage API in gatsby-node.js
 **What was covered in this section:**
 - What are the Gatsby Node APIs?
-- Implementing the createPage API and adding a graphql query
+- Implementing the createPage API and adding a GraphQL query
 - Mapping over our data to programmatically create pages
 
 **Resources:**
