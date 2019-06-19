@@ -6,8 +6,6 @@ ___Created by Rachelle Rathbone___.
 - [Section 2: Querying Data with GraphQL](#sectiontwo)
 
 ## #SectionOne
-## Getting Started with Gatsby JS
-
 ### What is GatsbyJS?
 **What was covered in this section:**
 * What is GatsbyJS?
@@ -33,7 +31,7 @@ in other Gatsby starter kits and examples. When the course is over, if you choos
 to continue working with this application, it may be a good idea to remove
 anything that you don't need from this file.
 
-### Typography and styling
+### Overview of typography and styling
 **What was covered in this section:**
 * Why we are using typography, how it's set up, and how you can make changes
 * How we'll style our application
@@ -46,9 +44,9 @@ anything that you don't need from this file.
 
 ### Using React Helmet to add metadata
 **What was covered in this section:**
-* Installing the gatsby-plugin-react-helmet and discussing why we need it.
+* Installing gatsby-plugin-react-helmet and discussing why we need it.
 * Creating out seo.js file and adding some basic content
-* Add our new SEO component to our blog
+* Adding our new SEO component to our blog
 
 **Code you won't want to type:**
 ```
@@ -97,7 +95,7 @@ anything that you don't need from this file.
 
 ### Creating a new page and linking between pages
 **What was covered in this section:**
-* Duplicating our index page so we have a dummy second page to link to
+* Duplicating our index page so we have a dummy page to link to
 * Adding a temporary element on each page that we'll use to link pages
 * Importing Gatsby's link component and linking our pages
 
@@ -113,9 +111,9 @@ anything that you don't need from this file.
 
 ### Querying data in pages with GraphQL
 **What was covered in this section:**
-- import GraphQL and add our query to our index file
-- pass that data into into our component and check out the data in the console
-- update some of our content to use our data
+- Import GraphQL and add our query to our index file
+- Pass that data into into our component and check out the data in the console
+- Update some of our content to use our data
 
 **Our query from the first video:**
 ```
@@ -138,5 +136,5 @@ query {
 ### Updating seo.js with useStaticQuery hook
 **What was covered in this section:**
 - Comparing the StaticQuery component to the useStaticQuery hook.
-- Configuring seo.js with our useStaticQuery hook
+- Configuring seo.js with our useStaticQuery hook.
 - Updating seo.js to consume data from our GraphQL query.
