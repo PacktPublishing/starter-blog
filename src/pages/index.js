@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, graphql } from 'gatsby'
 
 // Components
 import Layout from '../components/layout'
@@ -6,9 +7,13 @@ import SEO from '../components/seo'
 
 class BlogIndex extends React.Component {
   render() {
+    const { data } = this.props
+    const blogTitle = data.site.siteMetadata.title
+    const authorName = data.site.siteMetadata.author
+
     return (
       <Layout
-        title="Starter Blog"
+        title={blogTitle}
         subtitle="Built with React and Gatsby"
       >
         <SEO title="All posts"/>
@@ -21,7 +26,9 @@ class BlogIndex extends React.Component {
               big cheese stinking bishop cheesecake st. agur blue cheese. Cow
               rubber cheese cheese triangles say cheese cheese on toast cheddar
               red leicester swiss. </p>
-              <button>Read more</button>
+              <Link to="/cheddar-cheese">
+                <button>Read more</button>
+              </Link>
             </div>
             <div className="post-summary">
               <p>May 13th, 2019</p>
@@ -32,13 +39,15 @@ class BlogIndex extends React.Component {
                 cheese on toast jarlsberg red leicester chalk and cheese
                 fromage.
               </p>
-              <button>Read more</button>
+              <Link to="/toast-babybel">
+                <button>Read more</button>
+              </Link>
             </div>
           </section>
           <aside>
             <p>We'll put a profile pic here later</p>
             <h3>
-              Rachelle Rathbone
+              {authorName}
             </h3>
             <p>
               Goat gouda who moved my cheese. Red leicester edam port-salut
@@ -54,3 +63,14 @@ class BlogIndex extends React.Component {
 }
 
 export default BlogIndex
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+  }
+`
