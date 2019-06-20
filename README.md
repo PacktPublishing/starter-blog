@@ -178,6 +178,9 @@ query {
 - Installing the gatsby-remark-social-cards plugin and updating our config.
 - Making some more changes to our seo.js to include social card metadata.
 
+**Resouces:**
+- Install [gatsby-plugin-social-cards](https://www.gatsbyjs.org/packages/gatsby-remark-social-cards/) to increase click rates.
+
 **Options for your social card plugin config:**
 ```
 options: {
