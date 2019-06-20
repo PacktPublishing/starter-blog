@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby'
 
 // Components
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 
 class BlogIndex extends React.Component {
   render() {
@@ -16,7 +15,6 @@ class BlogIndex extends React.Component {
         title={blogTitle}
         subtitle="Built with React and Gatsby"
       >
-        <SEO title="All posts"/>
         <div className="blog-container">
           <section>
             <div className="post-summary">
