@@ -27,10 +27,17 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 450,
+            },
+          },
         ]
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -63,7 +70,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: `GTM-NJ3SJD6`,
-        includeInDevelopment: true
+        includeInDevelopment: false
       },
     },
     {

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
@@ -8,16 +9,19 @@ import SEO from '../components/seo'
 // Utils
 import { shorten } from '../utils/truncateStr'
 
+// Assets
+// import profilePic from '../../content/assets/profile-pic.png'
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const blogTitle = data.site.siteMetadata.title
-    const authorName = data.site.siteMetadata.author
+    const { title, author } = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
-
+    const profilePic = data.profilePic.childImageSharp.fluid.src
+console.log(data.profilePic)
     return (
       <Layout
-        title={blogTitle}
+        title={title}
         subtitle="Built with React and Gatsby"
       >
         <SEO title="All posts"/>
@@ -37,9 +41,9 @@ class BlogIndex extends React.Component {
             })}
           </section>
           <aside>
-            <p>We'll put a profile pic here later</p>
+            <img src={profilePic} alt=""/>
             <h3>
-              {authorName}
+              {author}
             </h3>
             <p>
               Goat gouda who moved my cheese. Red leicester edam port-salut
@@ -77,6 +81,13 @@ export const pageQuery = graphql`
             title
             description
           }
+        }
+      }
+    }
+    profilePic: file(absolutePath: { regex: "/profile-pic.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 400, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
