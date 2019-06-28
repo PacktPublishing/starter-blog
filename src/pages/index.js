@@ -1,6 +1,7 @@
 // @ts-nocheck
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 // Components
 import Layout from '../components/layout'
@@ -17,8 +18,8 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const { title, author } = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
-    const profilePic = data.profilePic.childImageSharp.fluid.src
-console.log(data.profilePic)
+    const profilePic = data.profilePic.childImageSharp.fluid
+
     return (
       <Layout
         title={title}
@@ -41,7 +42,7 @@ console.log(data.profilePic)
             })}
           </section>
           <aside>
-            <img src={profilePic} alt=""/>
+            <Img fluid={profilePic} alt={`Author ${author}`} />
             <h3>
               {author}
             </h3>
