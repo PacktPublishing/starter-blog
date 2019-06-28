@@ -6,6 +6,7 @@ ___Created by Rachelle Rathbone___.
 - [Section 2: Querying Data with GraphQL](#sectiontwo)
 - [Section 3: Gatsby Plugins](#sectionthree)
 - [Section 4: Programmatically Creating Pages](#sectionfour)
+- [Section 5: Working with Images in Gatsby](#sectionfive)
 
 ## #SectionOne
 ### What is GatsbyJS?
@@ -329,3 +330,45 @@ temporarily adding hardcoded props
   </li>
 </ul>
 ```
+
+## #SectionFive
+## Working with Images in Gatsby
+
+**Before we start**...
+Don't forget to 
+
+### Importing Files with GraphQL
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+### Using Gatsby Image
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+### Adding Images to Our Markdown Files
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+### Adding Videos to Our App
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
