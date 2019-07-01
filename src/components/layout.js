@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 class Layout extends React.Component {
   render() {
@@ -7,15 +7,11 @@ class Layout extends React.Component {
     return (
       <div className="app-container">
         <header>
-          <h1>
-            {title}
-          </h1>
+          <h1>{title}</h1>
           <p>{subtitle}</p>
         </header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Rachelle Rathbone
-        </footer>
+        <footer>© {new Date().getFullYear()}, Rachelle Rathbone</footer>
       </div>
     )
   }
