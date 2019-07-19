@@ -33,9 +33,9 @@ class BlogIndex extends React.Component {
                 <div className="post-summary" key={index}>
                   <p>{post.node.frontmatter.date}</p>
                   <h2>{post.node.frontmatter.title}</h2>
-                  <div className="content" dangerouslySetInnerHTML={{ __html: shorten(post.node.html, 300) }} />
+                  <div className="content" dangerouslySetInnerHTML={{ __html: shorten(post.node.html, 200) }} />
                   <Link to={post.node.fields.slug}>
-                    <button>Read more</button>
+                    <button data-gtm="read-more">Read more</button>
                   </Link>
                 </div>
               )

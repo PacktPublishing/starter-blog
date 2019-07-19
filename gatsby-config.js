@@ -32,7 +32,8 @@ module.exports = {
               options: {
               maxWidth: 590,
             },
-          }
+          },
+          `gatsby-remark-responsive-iframe`
         ]
       },
     },
@@ -70,7 +71,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
         id: `GTM-NJ3SJD6`,
-        includeInDevelopment: false
+        includeInDevelopment: true
       },
     },
     {
