@@ -5,22 +5,29 @@
 .blog-container section {
   border-right: 1px solid lightgrey;
   flex: 0 0 65%;
-  padding: 2em 2em 0 0;
+  padding: 2rem 2rem 0 0;
 }
 
 .post-summary {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .post-summary p:first-child {
   color: #a0a0a0;
   font-size: 14px;
   font-weight: lighter;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
+}
+
+.post-summary .content p {
+  color: #333;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 1rem;
 }
 
 .post-summary h2 {
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
 }
 
 aside {
