@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
                   <h2>{post.node.frontmatter.title}</h2>
                   <div className="content" dangerouslySetInnerHTML={{ __html: shorten(post.node.html, 300) }} />
                   <Link to={post.node.fields.slug}>
-                    <button>Read more</button>
+                    <button data-gtm="read-more" id={`data::${post.node.fields.slug}`}>Read more</button>
                   </Link>
                 </div>
               )
