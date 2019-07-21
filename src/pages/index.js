@@ -1,5 +1,7 @@
+// @ts-nocheck
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 // Components
 import Layout from '../components/layout'
@@ -8,16 +10,19 @@ import SEO from '../components/seo'
 // Utils
 import { shorten } from '../utils/truncateStr'
 
+// Assets
+// import profilePic from '../../content/assets/profile-pic.png'
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
-    const blogTitle = data.site.siteMetadata.title
-    const authorName = data.site.siteMetadata.author
+    const { title, author } = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
+    const profilePic = data.profilePic.childImageSharp.fluid
 
     return (
       <Layout
-        title={blogTitle}
+        title={title}
         subtitle="Built with React and Gatsby"
       >
         <SEO title="All posts"/>
@@ -28,7 +33,7 @@ class BlogIndex extends React.Component {
                 <div className="post-summary" key={index}>
                   <p>{post.node.frontmatter.date}</p>
                   <h2>{post.node.frontmatter.title}</h2>
-                  <div className="content" dangerouslySetInnerHTML={{ __html: shorten(post.node.html, 300) }} />
+                  <div className="content" dangerouslySetInnerHTML={{ __html: shorten(post.node.html, 200) }} />
                   <Link to={post.node.fields.slug}>
                     <button data-gtm="read-more" id={`data::${post.node.fields.slug}`}>Read more</button>
                   </Link>
@@ -37,9 +42,9 @@ class BlogIndex extends React.Component {
             })}
           </section>
           <aside>
-            <p>We'll put a profile pic here later</p>
+            <Img fluid={profilePic} alt={`Author ${author}`} />
             <h3>
-              {authorName}
+              {author}
             </h3>
             <p>
               Goat gouda who moved my cheese. Red leicester edam port-salut
@@ -77,6 +82,13 @@ export const pageQuery = graphql`
             title
             description
           }
+        }
+      }
+    }
+    profilePic: file(absolutePath: { regex: "/profile-pic.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 400, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
