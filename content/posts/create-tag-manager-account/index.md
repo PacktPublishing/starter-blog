@@ -7,7 +7,8 @@ date: 2019-06-11
 
 If you’ve been following my course 'Hands-On Web Development with React and GatsbyJS' then this is the post you’ll need to follow so you can set up your Tag Manager (TM) account and update your `gatsby-config` file. For those of you who aren’t following the course, this post will still be beneficial to you if you’ve never set up a Tag Manager account and are looking for some guidance. Just make sure you have already created a Google Analytics account and added the necessary tracking to your codebase.
 
-<br/><br/>
+<br/>
+
 ###Account Creation
 Let’s get into the nit-gritty and start by creating a Tag Manager account. Go to the TM home page. In the center of the screen you’ll a circle above the words `Click here to create an account` and a the button in the upper right that says `Create Account`.
 
