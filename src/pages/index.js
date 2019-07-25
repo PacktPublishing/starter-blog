@@ -1,4 +1,6 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Dummy from "../components/dummy"
 
 // Components
 import Layout from '../components/layout'
@@ -6,12 +8,17 @@ import SEO from '../components/seo'
 
 class BlogIndex extends React.Component {
   render() {
+    const { data } = this.props
+    const blogTitle = data.site.siteMetadata.title
+    const authorName = data.site.siteMetadata.author
+
     return (
       <Layout
-        title="Starter Blog"
+        title={blogTitle}
         subtitle="Built with React and Gatsby"
       >
         <SEO title="All posts"/>
+        <Dummy />
         <div className="blog-container">
           <section>
             <div className="post-summary">
@@ -38,7 +45,7 @@ class BlogIndex extends React.Component {
           <aside>
             <p>We'll put a profile pic here later</p>
             <h3>
-              Rachelle Rathbone
+              {authorName}
             </h3>
             <p>
               Goat gouda who moved my cheese. Red leicester edam port-salut
@@ -54,3 +61,14 @@ class BlogIndex extends React.Component {
 }
 
 export default BlogIndex
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+  }
+`
