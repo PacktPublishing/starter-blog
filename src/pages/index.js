@@ -16,8 +16,9 @@ import { shorten } from '../utils/truncateStr'
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
+
     const { title, author } = data.site.siteMetadata
-    const posts = data.allMarkdownRemark.edges
+    const posts = data.allContentfulPost.edges
     const profilePic = data.profilePic.childImageSharp.fluid
 
     return (
@@ -31,11 +32,11 @@ class BlogIndex extends React.Component {
             {posts.map((post, index) => {
               return (
                 <div className="post-summary" key={index}>
-                  <p>{post.node.frontmatter.date}</p>
-                  <h2>{post.node.frontmatter.title}</h2>
-                  <div className="content" dangerouslySetInnerHTML={{ __html: shorten(post.node.html, 200) }} />
-                  <Link to={post.node.fields.slug}>
-                    <button data-gtm="read-more" id={`data::${post.node.fields.slug}`}>Read more</button>
+                  <p>{post.node.date}</p>
+                  <h2>{post.node.title}</h2>
+                  <div className="content" dangerouslySetInnerHTML={{ __html: shorten(post.node.content.childContentfulRichText.html, 200) }} />
+                  <Link to={post.node.slug}>
+                    <button data-gtm="read-more" id={`data::${post.node.slug}`}>Read more</button>
                   </Link>
                 </div>
               )
@@ -89,6 +90,27 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 400, maxHeight: 300) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    allContentfulPost {
+      edges {
+        node {
+          title
+          subtitle
+          description
+          date
+           image {
+            fluid {
+              src
+            }
+          }
+          content {
+            childContentfulRichText {
+              html
+            }
+          }
+          slug
         }
       }
     }

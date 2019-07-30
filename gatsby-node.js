@@ -5,52 +5,58 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/post.js`)
-  return graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              frontmatter {
+    return graphql(
+      `
+        {
+          allContentfulPost {
+            edges {
+              node {
                 title
                 subtitle
                 description
-              }
-              fields {
+                date
+                 image {
+                  fluid {
+                    src
+                  }
+                }
+                content {
+                  childContentfulRichText {
+                    html
+                  }
+                }
                 slug
               }
             }
           }
         }
+      `
+    ).then(result => {
+      if (result.errors) {
+        throw result.errors
       }
-    `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
 
-    const posts = result.data.allMarkdownRemark.edges
+      const posts = result.data.allContentfulPost.edges
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+      posts.forEach((post, index) => {
+        const previous = index === posts.length - 1 ? null : posts[index + 1].node
+        const next = index === 0 ? null : posts[index - 1].node
 
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
+        createPage({
+          path: post.node.slug,
+          component: blogPost,
+
+          context: {
+            slug: post.node.slug,
+            previous,
+            next,
+          },
+        })
       })
-    })
 
     return null
   })
+
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
