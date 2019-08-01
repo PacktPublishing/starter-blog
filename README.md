@@ -372,3 +372,43 @@ Don't forget to
 
 **Resources:**
 - Install [gatsby-remark-responsive-iframe](https://www.gatsbyjs.org/packages/gatsby-remark-responsive-iframe/) to allow you to embed YouTube videos in your markdown files.
+
+
+## #Contentful - Content Infrastructure
+## What is Contentful?
+**What was covered in this section:**
+- What a CMS is and the different types of CMSs
+- Pros and cons of traditional and headless CMSs
+- How Contentful is different from its competitors
+
+## Creating a Contentful account
+**What was covered in this section:**
+- Creating a Contentful account
+-
+-
+
+**Resources:**
+
+## Connecting Gatsby to Contentful
+**What was covered in this section:**
+- [Contentful account creation](https://app.contentful.com)
+-
+-
+
+**Resources:**
+
+## Writing our query in the playground
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+
+## Updating our app to consume posts from Contentful
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
