@@ -384,16 +384,14 @@ Don't forget to
 ## Creating a Contentful account
 **What was covered in this section:**
 - Creating a Contentful account
--
--
+- Adding fields to our content model
+- Adding some content to our space
 
 **Resources:**
 
 ## Connecting Gatsby to Contentful
 **What was covered in this section:**
 - [Contentful account creation](https://app.contentful.com)
--
--
 
 **Resources:**
 
