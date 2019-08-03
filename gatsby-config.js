@@ -3,6 +3,7 @@ const dotenv = require(`dotenv`);
 if (process.env.NODE_ENV !== 'production') {
 	dotenv.config();
 }
+console.log(dotenv.config());
 
 module.exports = {
 	siteMetadata: {
