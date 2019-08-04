@@ -2,7 +2,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 // Components
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -12,31 +13,31 @@ import { shorten } from '../utils/truncateStr';
 
 // Assets
 // import profilePic from '../../content/assets/profile-pic.png'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+const Bold = ({ children }) => <p className="bold">{children}</p>;
 
-const document = {
-	nodeType: 'document',
-	data: {},
-	content: [
-		{
-			nodeType: 'paragraph',
-			data: {},
-			content: [
-				{
-					nodeType: 'text',
-					value: 'Hello world!',
-					marks: [],
-					data: {}
-				}
-			]
+const Text = ({ children }) => <p className="align-center">{children}</p>;
+
+const options = {
+	renderMark: {
+		[MARKS.BOLD]: (text) => <Bold>{text}</Bold>
+	},
+	renderNode: {
+		[BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+		'embedded-asset-block': (node) => {
+			// `<img class="img-fluid" src="${node.data.target.fields.file['en-US'].url}"/>`;
 		}
-	]
+	},
+	renderText: (text) => text.replace('!', '?')
 };
-
-documentToReactComponents(document); // -> <p>Hello world!</p>
 class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
+
+		const stuff = documentToReactComponents(
+			data.allContentfulPosts.edges[3].node.childContentfulPostsContentRichTextNode.json,
+			options
+		);
+		console.log(stuff);
 
 		const { title, author } = data.site.siteMetadata;
 		// const posts = data.allContentfulPosts.edges;
@@ -97,6 +98,15 @@ export const pageQuery = graphql`
 			childImageSharp {
 				fluid(maxWidth: 400, maxHeight: 300) {
 					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		allContentfulPosts {
+			edges {
+				node {
+					childContentfulPostsContentRichTextNode {
+						json
+					}
 				}
 			}
 		}
