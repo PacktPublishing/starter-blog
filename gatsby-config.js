@@ -8,6 +8,7 @@ console.log(dotenv.config());
 module.exports = {
 	siteMetadata: {
 		title: `Starter Blog`,
+		subtitle: `Built with React and Gatsby`,
 		author: `Rachelle Rathbone`,
 		description: `A blog that shows you the awesome power of gatsby.`,
 		social: {
@@ -113,7 +114,6 @@ module.exports = {
 				spaceId: process.env.CONTENTFUL_SPACE_ID,
 				accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 			}
-		},
-		`@contentful/gatsby-transformer-contentful-richtext`
+		}
 	]
 };

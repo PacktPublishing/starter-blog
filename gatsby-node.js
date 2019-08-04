@@ -7,31 +7,26 @@ exports.createPages = ({ graphql, actions }) => {
 	const blogPost = path.resolve(`./src/templates/post.js`);
 	return graphql(
 		`
-        {
-          allContentfulPost {
-            edges {
-              node {
-                title
-                subtitle
-                description
-                date
-                content {
-                  childContentfulRichText {
-                    html
-                  }
+  	      {
+  	        allContentfulPosts {
+              edges {
+                node {
+                  title
+                  subtitle
+                  description
+                  slug
+                  date
                 }
-                slug
               }
             }
-          }
-        }
-      `
+  	      }
+  	    `
 	).then((result) => {
 		if (result.errors) {
 			throw result.errors;
 		}
 
-		const posts = result.data.allContentfulPost.edges;
+		const posts = result.data.allContentfulPosts.edges;
 
 		posts.forEach((post, index) => {
 			const previous = index === posts.length - 1 ? null : posts[index + 1].node;
@@ -54,15 +49,13 @@ exports.createPages = ({ graphql, actions }) => {
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-	const { createNodeField } = actions;
-
-	if (node.internal.type === `MarkdownRemark`) {
-		const value = createFilePath({ node, getNode });
-
-		createNodeField({
-			name: `slug`,
-			node,
-			value
-		});
-	}
+	// const { createNodeField } = actions;
+	// if (node.internal.type === `MarkdownRemark`) {
+	// 	const value = createFilePath({ node, getNode });
+	// 	createNodeField({
+	// 		name: `slug`,
+	// 		node,
+	// 		value
+	// 	});
+	// }
 };

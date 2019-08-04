@@ -7,63 +7,71 @@ import SEO from '../components/seo';
 
 class PostTemplate extends React.Component {
 	render() {
-		const frontmatter = this.props.data.markdownRemark.frontmatter;
-		console.log(this.props.data);
+		// const content = this.props.data.contentfulPosts;
 
-		// const { title, subtitle, description, date } = frontmatter
-		// const post = this.props.data.markdownRemark
-		const { previous, next } = this.props.pageContext;
+		// const { title, subtitle, description, date, slug } = content;
+		// const post = this.props.data.contentfulPosts.content.childContentfulRichText.html;
+		// const { previous, next } = this.props.pageContext;
+		// console.log(post);
 
 		return (
-			<Layout
-			// title={title}
-			// subtitle={subtitle}
-			>
-				<SEO
-				// title={title}
-				// description={description || post.excerpt}
-				/>
-				{/* <section className="posts">
-          <p className="date">
-            {date}
-          </p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <ul>
-            <li className="post-navigation">
-              {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li className="post-navigation">
-              {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </section> */}
-			</Layout>
+			// <Layout title={title} subtitle={subtitle}>
+			// 	<SEO title={title} description={description} />
+			<section className="posts">
+				{/* <p className="date">{date}</p>
+					<div dangerouslySetInnerHTML={{ __html: post }} />
+					<ul>
+						<li className="post-navigation">
+							{previous && (
+								<Link to={previous.slug} rel="prev">
+									← {previous.title}
+								</Link>
+							)}
+						</li>
+						<li className="post-navigation">
+							{next && (
+								<Link to={next.slug} rel="next">
+									{next.title} →
+								</Link>
+							)}
+						</li>
+					</ul> */}
+			</section>
+			// </Layout>
 		);
 	}
 }
 
 export default PostTemplate;
 
-export const pageQuery = graphql`
-	query Posts($slug: String!) {
-		markdownRemark(fields: { slug: { eq: $slug } }) {
-			id
-			excerpt(pruneLength: 160)
-			html
-			frontmatter {
-				title
-				date(formatString: "MMMM DD, YYYY")
-				subtitle
-				description
-			}
-		}
-	}
-`;
+// export const pageQuery = graphql`
+// 	query Posts {
+// 		contentfulPosts {
+// 			title
+// 			subtitle
+// 			description
+// 			slug
+// 			date(formatString: "MMMM DD, YYYY")
+// 			content {
+// 				childContentfulRichText {
+// 					html
+// 				}
+// 			}
+// 		}
+// 	}
+// `;
+// export const pageQuery = graphql`
+// 	query Posts($slug: String!) {
+// 		markdownRemark(fields: { slug: { eq: $slug } }) {
+// 			id
+// 			excerpt(pruneLength: 160)
+// 			html
+// 			frontmatter {
+// 				title
+// 				date(formatString: "MMMM DD, YYYY")
+// 				subtitle
+// 				description
+// 			}
+// 		}
+// 	}
+// `;
