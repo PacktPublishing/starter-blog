@@ -7,19 +7,22 @@ import SEO from '../components/seo';
 
 class PostTemplate extends React.Component {
 	render() {
-		// const content = this.props.data.contentfulPosts;
-
-		// const { title, subtitle, description, date, slug } = content;
-		// const post = this.props.data.contentfulPosts.content.childContentfulRichText.html;
-		// const { previous, next } = this.props.pageContext;
-		// console.log(post);
+		const content = this.props.data.contentfulPosts;
+		const { title, subtitle, description, date, slug, childContentfulPostsContentRichTextNode } = content;
+		const { previous, next } = this.props.pageContext;
 
 		return (
-			// <Layout title={title} subtitle={subtitle}>
-			// 	<SEO title={title} description={description} />
-			<section className="posts">
-				{/* <p className="date">{date}</p>
-					<div dangerouslySetInnerHTML={{ __html: post }} />
+			<Layout title={title} subtitle={subtitle}>
+				<SEO title={title} description={description} />
+				<section className="posts">
+					<p className="date">{date}</p>
+					{childContentfulPostsContentRichTextNode.json.content.map((postContent) => {
+						postContent.content.map((type) => {
+							return <div dangerouslySetInnerHTML={{ __html: type.value }} />;
+						});
+					})}
+
+					{/* <div dangerouslySetInnerHTML={{ __html: post }} /> */}
 					<ul>
 						<li className="post-navigation">
 							{previous && (
@@ -35,43 +38,26 @@ class PostTemplate extends React.Component {
 								</Link>
 							)}
 						</li>
-					</ul> */}
-			</section>
-			// </Layout>
+					</ul>
+				</section>
+			</Layout>
 		);
 	}
 }
 
 export default PostTemplate;
 
-// export const pageQuery = graphql`
-// 	query Posts {
-// 		contentfulPosts {
-// 			title
-// 			subtitle
-// 			description
-// 			slug
-// 			date(formatString: "MMMM DD, YYYY")
-// 			content {
-// 				childContentfulRichText {
-// 					html
-// 				}
-// 			}
-// 		}
-// 	}
-// `;
-// export const pageQuery = graphql`
-// 	query Posts($slug: String!) {
-// 		markdownRemark(fields: { slug: { eq: $slug } }) {
-// 			id
-// 			excerpt(pruneLength: 160)
-// 			html
-// 			frontmatter {
-// 				title
-// 				date(formatString: "MMMM DD, YYYY")
-// 				subtitle
-// 				description
-// 			}
-// 		}
-// 	}
-// `;
+export const pageQuery = graphql`
+	query Posts($slug: String!) {
+		contentfulPosts(slug: { eq: $slug }) {
+			title
+			subtitle
+			description
+			slug
+			date(formatString: "MMMM DD, YYYY")
+			childContentfulPostsContentRichTextNode {
+				json
+			}
+		}
+	}
+`;

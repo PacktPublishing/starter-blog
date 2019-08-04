@@ -8,7 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
 	return graphql(
 		`
   	      {
-  	        allContentfulPosts {
+  	        allContentfulPosts(sort: { fields: [date], order: DESC }) {
               edges {
                 node {
                   title
@@ -16,6 +16,9 @@ exports.createPages = ({ graphql, actions }) => {
                   description
                   slug
                   date
+                  childContentfulPostsContentRichTextNode {
+                    json
+                  }
                 }
               }
             }
@@ -46,16 +49,4 @@ exports.createPages = ({ graphql, actions }) => {
 
 		return null;
 	});
-};
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-	// const { createNodeField } = actions;
-	// if (node.internal.type === `MarkdownRemark`) {
-	// 	const value = createFilePath({ node, getNode });
-	// 	createNodeField({
-	// 		name: `slug`,
-	// 		node,
-	// 		value
-	// 	});
-	// }
 };

@@ -11,8 +11,6 @@ import SEO from '../components/seo';
 // Utils
 import { shorten } from '../utils/truncateStr';
 
-// Assets
-// import profilePic from '../../content/assets/profile-pic.png'
 const Bold = ({ children }) => <p className="bold">{children}</p>;
 const Text = ({ children }) => <p className="align-center">{children}</p>;
 const Image = ({ children }) => <img src={children} />;
@@ -31,23 +29,19 @@ const options = {
 class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
-
-		const stuff = documentToReactComponents(
-			data.allContentfulPosts.edges[3].node.childContentfulPostsContentRichTextNode.json,
-			options
-		);
-		console.log(stuff);
-
 		const { title, subtitle, author } = data.site.siteMetadata;
-		// const posts = data.allContentfulPosts.edges;
+		const posts = data.allContentfulPosts.edges;
 		const profilePic = data.profilePic.childImageSharp.fluid;
+		const postContent = data.allContentfulPosts.edges.map((content) => {
+			return documentToReactComponents(content.node.childContentfulPostsContentRichTextNode.json, options);
+		});
 
 		return (
 			<Layout title={title} subtitle={subtitle}>
 				<SEO title="All posts" />
 				<div className="blog-container">
 					<section>
-						{/* {posts.map((post, index) => {
+						{posts.map((post, index) => {
 							return (
 								<div className="post-summary" key={index}>
 									<p>{post.node.date}</p>
@@ -55,7 +49,11 @@ class BlogIndex extends React.Component {
 									<div
 										className="content"
 										dangerouslySetInnerHTML={{
-											__html: shorten(post.node.content.childContentfulRichText.html, 200)
+											__html: shorten(
+												post.node.childContentfulPostsContentRichTextNode.json.content[0]
+													.content[0].value,
+												200
+											)
 										}}
 									/>
 									<Link to={post.node.slug}>
@@ -65,7 +63,7 @@ class BlogIndex extends React.Component {
 									</Link>
 								</div>
 							);
-						})} */}
+						})}
 					</section>
 					<aside>
 						<Img fluid={profilePic} alt={`Author ${author}`} />
@@ -99,9 +97,14 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		allContentfulPosts {
+		allContentfulPosts(sort: { fields: [date], order: DESC }) {
 			edges {
 				node {
+					title
+					subtitle
+					slug
+					description
+					date(formatString: "MMMM DD, YYYY")
 					childContentfulPostsContentRichTextNode {
 						json
 					}
@@ -110,36 +113,3 @@ export const pageQuery = graphql`
 		}
 	}
 `;
-
-// allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-// 	edges {
-// 		node {
-// 			excerpt
-// 			fields {
-// 				slug
-// 			}
-// 			html
-// 			frontmatter {
-// 				date(formatString: "MMMM DD, YYYY")
-// 				title
-// 				description
-// 			}
-// 		}
-// 	}
-// }
-// allContentfulPosts {
-// 	edges {
-// 		node {
-// 			title
-// 			subtitle
-// 			description
-// 			date
-// 			content {
-// 				childContentfulRichText {
-// 					html
-// 				}
-// 			}
-// 			slug
-// 		}
-// 	}
-// }

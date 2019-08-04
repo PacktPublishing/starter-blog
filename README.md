@@ -388,14 +388,19 @@ Don't forget to
 - Adding some content to our space
 
 **Resources:**
+- [Contentful account creation](https://app.contentful.com)
 
 ## Connecting Gatsby to Contentful
 **What was covered in this section:**
-- [Contentful account creation](https://app.contentful.com)
+- Installing the necessary plugins to work with Contentful data with Gatsby
+- Adding our Contentful spaceId and accessToken
+- Implementing a .env file to make our app more secure
 
 **Resources:**
+- The [source plugin](https://www.gatsbyjs.org/packages/gatsby-source-contentful/) we need to communicate with Contentful.
+- To render rich text you'll need this [npm package](https://www.npmjs.com/package/@contentful/rich-text-react-renderer).
 
-## Writing our query in the playground
+## Updating gatsby-node with a Contentful query
 **What was covered in this section:**
 -
 -
