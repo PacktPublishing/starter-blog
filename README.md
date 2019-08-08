@@ -154,9 +154,9 @@ query {
 
 ### Welcome to the Gatsby Plugin Library
 **What was covered in this section:**
-- Introducing the Gatsby plugin library.
-- Exploring other plugin options.
-- Installing some more plugins for us to use in our app.
+- Introducing the Gatsby Plugin Library.
+- Installing more plugins to use in our app.
+- Updating our config.
 
 **Resources:**
 - [Plugin Library](https://www.gatsbyjs.org/plugins/)
