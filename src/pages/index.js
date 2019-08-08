@@ -2,8 +2,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 // Components
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -11,19 +10,19 @@ import SEO from '../components/seo';
 // Utils
 import { shorten } from '../utils/truncateStr';
 
-const Bold = ({ children }) => <p className="bold">{children}</p>;
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
+const Bold = ({ children }) => <span className="bold">{children}</span>;
 const Text = ({ children }) => <p className="align-center">{children}</p>;
-const Image = ({ children }) => <img src={children} />;
 
 const options = {
 	renderMark: {
 		[MARKS.BOLD]: (text) => <Bold>{text}</Bold>
 	},
 	renderNode: {
-		[BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-		[BLOCKS.EMBEDDED_ASSET]: (node, children) => <Img fluid={children} alt="" />
-	},
-	renderText: (text) => text.replace('!', '?')
+		[BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>
+	}
 };
 
 class BlogIndex extends React.Component {
@@ -35,7 +34,7 @@ class BlogIndex extends React.Component {
 		const postContent = data.allContentfulPosts.edges.map((content) => {
 			return documentToReactComponents(content.node.childContentfulPostsContentRichTextNode.json, options);
 		});
-
+		console.log(postContent[0][0].props.children[0]);
 		return (
 			<Layout title={title} subtitle={subtitle}>
 				<SEO title="All posts" />
@@ -46,7 +45,8 @@ class BlogIndex extends React.Component {
 								<div className="post-summary" key={index}>
 									<p>{post.node.date}</p>
 									<h2>{post.node.title}</h2>
-									<div
+									<p />
+									{/* <div
 										className="content"
 										dangerouslySetInnerHTML={{
 											__html: shorten(
@@ -55,7 +55,7 @@ class BlogIndex extends React.Component {
 												200
 											)
 										}}
-									/>
+									/> */}
 									<Link to={post.node.slug}>
 										<button data-gtm="read-more" id={`data::${post.node.slug}`}>
 											Read more
