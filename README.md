@@ -415,3 +415,50 @@ Don't forget to
 -
 
 **Resources:**
+
+
+## #Deploying Your App
+## Creating a Netlify Account
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+- Sign up for a [Netlify Account](https://app.netlify.com/signup)
+
+## Prepping for the build
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+## Linking to your repository
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+## Building and deploying your web app
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+## Upping the game with Gatsby Preview
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
