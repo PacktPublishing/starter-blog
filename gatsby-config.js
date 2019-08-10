@@ -5,8 +5,7 @@ module.exports = {
 		description: `A blog that shows you the awesome power of gatsby.`,
 		social: {
 			twitter: `coding_love`
-		},
-		siteUrl: `http://localhost:9000`
+		}
 	},
 	plugins: [
 		{
@@ -14,13 +13,6 @@ module.exports = {
 			options: {
 				path: `${__dirname}/content/assets`,
 				name: `assets`
-			}
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/content/posts`,
-				name: `blogPosts`
 			}
 		},
 		{
@@ -46,21 +38,6 @@ module.exports = {
 			options: {}
 		},
 		`gatsby-plugin-react-helmet`,
-		`gatsby-plugin-offline`,
-		`gatsby-plugin-sitemap`,
-		{
-			resolve: `gatsby-plugin-google-analytics`,
-			options: {
-				trackingId: ``,
-				head: true
-			}
-		},
-		{
-			resolve: `gatsby-plugin-google-tagmanager`,
-			options: {
-				id: ``,
-				includeInDevelopment: true
-			}
-		}
+		`gatsby-plugin-offline`
 	]
 };
