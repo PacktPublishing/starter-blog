@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 
 // Components
 import Layout from '../components/layout';
@@ -7,12 +6,8 @@ import SEO from '../components/seo';
 
 class BlogIndex extends React.Component {
 	render() {
-		const { data } = this.props;
-		const blogTitle = data.site.siteMetadata.title;
-		const authorName = data.site.siteMetadata.author;
-
 		return (
-			<Layout title={blogTitle} subtitle="Built with React and Gatsby">
+			<Layout title="Starter Blog" subtitle="Built with React and Gatsby">
 				<SEO title="All posts" />
 				<div className="blog-container">
 					<section>
@@ -39,7 +34,7 @@ class BlogIndex extends React.Component {
 					</section>
 					<aside>
 						<p>We'll put a profile pic here later</p>
-						<h3>{authorName}</h3>
+						<h3>Rachelle Rathbone</h3>
 						<p>
 							Goat gouda who moved my cheese. Red leicester edam port-salut cream cheese pepper jack
 							halloumi jarlsberg mozzarella. Boursin cheese strings manchego bocconcini croque monsieur
@@ -53,14 +48,3 @@ class BlogIndex extends React.Component {
 }
 
 export default BlogIndex;
-
-export const pageQuery = graphql`
-	query {
-		site {
-			siteMetadata {
-				title
-				author
-			}
-		}
-	}
-`;
