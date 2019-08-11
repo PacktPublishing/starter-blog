@@ -418,6 +418,15 @@ Don't forget to
 
 
 ## #Deploying Your App
+## Deploying and Hosting
+**What was covered in this section:**
+- Looking at our deployment options
+- Why Netlify?
+- Discussing the option to add pathPrefix
+
+**Resources:**
+-
+
 ## Creating a Netlify Account
 **What was covered in this section:**
 -
@@ -426,15 +435,6 @@ Don't forget to
 
 **Resources:**
 - Sign up for a [Netlify Account](https://app.netlify.com/signup)
-
-## Prepping for the build
-**What was covered in this section:**
--
--
--
-
-**Resources:**
--
 
 ## Linking to your repository
 **What was covered in this section:**
