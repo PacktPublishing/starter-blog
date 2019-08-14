@@ -28,6 +28,7 @@ class BlogIndex extends React.Component {
 		const { title, subtitle, author } = data.site.siteMetadata;
 		const posts = data.allContentfulPosts.edges;
 		const profilePic = data.profilePic.childImageSharp.fluid;
+		console.log(data.allContentfulPosts.edges);
 
 		return (
 			<Layout>
@@ -35,25 +36,24 @@ class BlogIndex extends React.Component {
 				<SEO title="All posts" />
 				<div className="blog-container">
 					<section>
-						<ul className="post-summary">
-							{data.allContentfulPosts.edges.map((edge) => (
-								<li>
-									{/* <a href={edge.node.slug}>{edge.node.title}</a> */}
-									<p>
-										{!edge.node.content ? (
-											'[empty]'
-										) : (
-											documentToReactComponents(edge.node.content.json, options)
-										)}
-									</p>
-									<Link to={post.node.slug}>
-										<button data-gtm="read-more" id={`data::${edge.node.slug}`}>
-											Read more
-										</button>
-									</Link>
-								</li>
-							))}
-						</ul>
+						{data.allContentfulPosts.edges.map((edge) => (
+							<div className="post-summary">
+								<p>{edge.node.date}</p>
+								<h2>{edge.node.title}</h2>
+								<p>
+									{!edge.node.content ? (
+										'[empty]'
+									) : (
+										documentToReactComponents(edge.node.content.json, options)
+									)}
+								</p>
+								<Link to={edge.node.slug}>
+									<button data-gtm="read-more" id={`data::${edge.node.slug}`}>
+										Read more
+									</button>
+								</Link>
+							</div>
+						))}
 
 						{/* <div className="post-summary" key={index}>
 									<p>{post.node.date}</p>
@@ -102,6 +102,9 @@ export const pageQuery = graphql`
 			edges {
 				node {
 					title
+					description
+					date(formatString: "MMMM DD, YYYY")
+					slug
 					content {
 						json
 					}
