@@ -25,7 +25,11 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-remark`,
-      options: {},
+      options: {
+        plugins: [
+          
+        ]
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
