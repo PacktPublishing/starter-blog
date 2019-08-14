@@ -1,66 +1,68 @@
-// const path = require(`path`);
-// const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
-// exports.createPages = ({ graphql, actions }) => {
-// 	const { createPage } = actions;
+exports.createPages = ({ graphql, actions }) => {
+	const { createPage } = actions;
 
-// 	const blogPost = path.resolve(`./src/templates/post.js`);
-// 	return graphql(
-// 		`
-// 		{
-// 			allContentfulProduct(sort: { fields: [date], order: DESC }) {
-// 				edges {
-// 					node {
-// 						productName
-// 						productSlug
-// 						productDescription {
-// 							json
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
+	const blogPost = path.resolve(`./src/templates/post.js`);
+	return graphql(
+		`
+      {
+        allContentfulPosts(
+          sort: { fields: [date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+                title
+                subtitle
+                description
+                date
+                slug
+                content {
+                    json
+                }
+            }
+          }
+        }
+      }
+    `
+	).then((result) => {
+		if (result.errors) {
+			throw result.errors;
+		}
 
-//   	    `
-// 	).then((result) => {
-// 		if (result.errors) {
-// 			throw result.errors;
-// 		}
+		const posts = result.data.allContentfulPosts.edges;
 
-// 		const posts = result.data.allContentfulProduct.edges;
-// 		// {
-// 		// 	allContentfulPosts(sort: { fields: [date], order: DESC }) {
-// 		// 	edges {
-// 		// 	  node {
-// 		// 		title
-// 		// 		subtitle
-// 		// 		description
-// 		// 		slug
-// 		// 		date
-// 		// 		content {
-// 		// 		  json
-// 		// 		}
-// 		// 	  }
-// 		// 	}
-// 		//   }
-// 		//   }
-// 		posts.forEach((post, index) => {
-// 			const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-// 			const next = index === 0 ? null : posts[index - 1].node;
-// 			// console.log(post);
+		posts.forEach((post, index) => {
+			const previous = index === posts.length - 1 ? null : posts[index + 1].node;
+            const next = index === 0 ? null : posts[index - 1].node;
+            
+			createPage({
+				path: post.node.slug,
+				component: blogPost,
+				context: {
+					slug: post.node.slug,
+					previous,
+					next
+				}
+			});
+		});
 
-// 			// createPage({
-// 			// 	path: post.node.slug,
-// 			// 	component: blogPost,
+		return null;
+	});
+};
 
-// 			// 	context: {
-// 			// 		slug: post.node.slug,
-// 			// 		previous,
-// 			// 		next
-// 			// 	}
-// 			// });
-// 		});
+exports.onCreateNode = ({ node, actions, getNode }) => {
+	const { createNodeField } = actions;
 
-// 		return null;
-// 	});
-// };
+	if (node.internal.type === `MarkdownRemark`) {
+		const value = createFilePath({ node, getNode });
+
+		createNodeField({
+			name: `slug`,
+			node,
+			value
+		});
+	}
+};
