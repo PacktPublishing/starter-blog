@@ -8,63 +8,35 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-// Utils
-import { shorten } from '../utils/truncateStr';
-
-export const options = {
-	renderMark: {
-		[MARKS.BOLD]: (text) => <b>{text}</b>,
-		[MARKS.CODE]: (text) => <i>{text}</i>
-	},
-	renderNode: {
-		[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
-		[BLOCKS.DOCUMENT]: (node, children) => <div>{children}</div>
-	}
-};
-
 class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
 		const { title, subtitle, author } = data.site.siteMetadata;
 		const posts = data.allContentfulPosts.edges;
 		const profilePic = data.profilePic.childImageSharp.fluid;
-		console.log(data.allContentfulPosts.edges);
 
 		return (
-			<Layout>
+			<Layout title={title} subtitle={subtitle}>
 				<base href="/post/" />
 				<SEO title="All posts" />
 				<div className="blog-container">
 					<section>
-						{data.allContentfulPosts.edges.map((edge) => (
-							<div className="post-summary">
-								<p>{edge.node.date}</p>
-								<h2>{edge.node.title}</h2>
-								<p>
-									{!edge.node.content ? (
-										'[empty]'
-									) : (
-										documentToReactComponents(edge.node.content.json, options)
-									)}
-								</p>
-								<Link to={edge.node.slug}>
-									<button data-gtm="read-more" id={`data::${edge.node.slug}`}>
-										Read more
-									</button>
-								</Link>
-							</div>
-						))}
+						{posts.map(
+							(post) =>
+								post.node.content && (
+									<div className="post-summary" key={post.node.title}>
+										<p>{post.node.date}</p>
+										<h2>{post.node.title}</h2>
+										<p>{post.node.description}</p>
 
-						{/* <div className="post-summary" key={index}>
-									<p>{post.node.date}</p>
-									<h2>{post.node.title}</h2>
-
-									<Link to={post.node.slug}>
-										<button data-gtm="read-more" id={`data::${post.node.slug}`}>
-											Read more
-										</button>
-									</Link>
-								</div> */}
+										<Link to={post.node.slug}>
+											<button data-gtm="read-more" id={`data::${post.node.slug}`}>
+												Read more
+											</button>
+										</Link>
+									</div>
+								)
+						)}
 					</section>
 					<aside>
 						<Img fluid={profilePic} alt={`Author ${author}`} />
