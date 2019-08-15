@@ -6,12 +6,12 @@ import SEO from '../components/seo';
 
 class PostTemplate extends React.Component {
 	render() {
-		<Layout title="A title" subtitle="A subtitle">
-			<SEO title="Another title" description="A description" />
-            <section className="posts">
-                Things will happen here soon.
-            </section>
-		</Layout>;
+		return (
+			<Layout title="A title" subtitle="A subtitle">
+				<SEO title="Another title" description="A description" />
+				<section className="posts">Things will happen here soon.</section>
+			</Layout>
+		);
 	}
 }
 
