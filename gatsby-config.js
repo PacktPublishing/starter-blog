@@ -2,6 +2,7 @@ module.exports = {
 	siteMetadata: {
 		title: `Starter Blog`,
 		author: `Rachelle Rathbone`,
+		bio: `Teacher turned engineer, Rachelle is a software engineer and mother of one, with a killer Australian accent.`,
 		description: `A blog that shows you the awesome power of gatsby.`,
 		social: {
 			twitter: `coding_love`
