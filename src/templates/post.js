@@ -7,28 +7,18 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-export const options = {
+const options = {
 	renderMark: {
 		[MARKS.BOLD]: (text) => <b>{text}</b>,
 		[MARKS.CODE]: (text) => <i>{text}</i>
 	},
 	renderNode: {
-		// [BLOCKS.PARAGRAPH]: (node, next) => `<p>${next.replace(/\n/g, '<br/>')}</p>`,
-		// [BLOCKS.PARAGRAPH]: (node) => `<p>${node.content.replace(/\n/g, '<br/>')}</p>`,
-		// [BLOCKS.PARAGRAPH]: (node, next) => {
-		// 	next.map((n) => {
-		// 		// return `<p>${n.replace(/\n/g, '<br/>')}</p>`;
-		// 		console.log(n);
-		// 	});
-		// 	// const { description, file } = node.data.target.fields;
-
-		// 	// return <img alt={description ? description['en-US'] : null} src={file['en-US'].url} />;
-		// },
 		[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
 		[BLOCKS.DOCUMENT]: (node, children) => <div>{children}</div>,
 		[BLOCKS.EMBEDDED_ASSET]: (node) => {
-			// const { description, file } = node.data.target.fields;
-			// return <img alt={description ? description['en-US'] : null} src={file['en-US'].url} />;
+			const { description, file } = node.data.target.fields;
+
+			return <img alt={description ? description['en-US'] : null} src={file['en-US'].url} />;
 		}
 	}
 };
@@ -45,7 +35,6 @@ class PostTemplate extends React.Component {
 				<section className="posts">
 					<p className="date">{date}</p>
 					{content && documentToReactComponents(content.json, options)}
-					<br />
 					<ul>
 						<li className="post-navigation">
 							{previous && (
