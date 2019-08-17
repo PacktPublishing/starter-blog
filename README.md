@@ -334,9 +334,6 @@ temporarily adding hardcoded props
 ## #SectionFive
 ## Working with Images in Gatsby
 
-**Before we start**...
-Don't forget to
-
 ### Importing Files with GraphQL
 **What was covered in this section:**
 - Importing an image the regular way.
