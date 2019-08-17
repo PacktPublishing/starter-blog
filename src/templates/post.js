@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 // Components
 import Layout from '../components/layout';
@@ -16,3 +17,18 @@ class PostTemplate extends React.Component {
 }
 
 export default PostTemplate;
+
+export const pageQuery = graphql`
+ query Posts($slug: String!) {
+   markdownRemark(fields: { slug: { eq: $slug } }) {
+     id
+     excerpt(pruneLength: 160)
+     html
+     frontmatter {
+       title
+       date(formatString: "MMMM DD, YYYY")
+       description
+     }
+   }
+ }
+`
