@@ -26,12 +26,12 @@ const options = {
 class PostTemplate extends React.Component {
 	render() {
 		const postContent = this.props.data.contentfulPosts;
-		const { title, subtitle, description, date, content } = postContent;
+		const { title, subtitle, description, date, slug, content } = postContent;
 		const { previous, next } = this.props.pageContext;
 
 		return (
 			<Layout title={title} subtitle={subtitle}>
-				<SEO title={title} description={description} />
+				<SEO title={title} description={description} slug={slug} />
 				<section className="posts">
 					<p className="date">{date}</p>
 					{content && documentToReactComponents(content.json, options)}
@@ -66,6 +66,7 @@ export const pageQuery = graphql`
 			subtitle
 			description
 			date(formatString: "MMMM DD, YYYY")
+			slug
 			content {
 				json
 			}
