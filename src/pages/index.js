@@ -8,6 +8,9 @@ import SEO from '../components/seo';
 // Utils
 import { shorten } from '../utils/truncateStr';
 
+// Assets
+import profilePic from '../../content/assets/profile-pic.png';
+
 class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
@@ -38,7 +41,7 @@ class BlogIndex extends React.Component {
 						})}
 					</section>
 					<aside>
-						<p>We'll put a profile pic here later</p>
+						<img src={profilePic} alt="" />
 						<h3>{authorName}</h3>
 						<p>{bio}</p>
 					</aside>
