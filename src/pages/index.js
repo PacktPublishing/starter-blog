@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 // Components
 import Layout from '../components/layout';
@@ -8,9 +9,6 @@ import SEO from '../components/seo';
 // Utils
 import { shorten } from '../utils/truncateStr';
 
-// Assets
-import profilePic from '../../content/assets/profile-pic.png';
-
 class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
@@ -18,6 +16,7 @@ class BlogIndex extends React.Component {
 		const authorName = data.site.siteMetadata.author;
 		const posts = data.allMarkdownRemark.edges;
 		const bio = data.site.siteMetadata.bio;
+		const profilePic = data.profilePic.childImageSharp.fluid;
 
 		return (
 			<Layout title={blogTitle} subtitle="Built with React and Gatsby">
@@ -41,7 +40,7 @@ class BlogIndex extends React.Component {
 						})}
 					</section>
 					<aside>
-						<img src={profilePic} alt="" />
+						<Img fluid={profilePic} alt={`Author ${authorName}`} />
 						<h3>{authorName}</h3>
 						<p>{bio}</p>
 					</aside>
@@ -75,6 +74,13 @@ export const pageQuery = graphql`
 						title
 						description
 					}
+				}
+			}
+		}
+		profilePic: file(absolutePath: { regex: "/profile-pic.png/" }) {
+			childImageSharp {
+				fluid(maxWidth: 400, maxHeight: 300) {
+					...GatsbyImageSharpFluid
 				}
 			}
 		}
