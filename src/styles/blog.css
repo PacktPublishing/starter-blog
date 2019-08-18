@@ -1,88 +1,87 @@
 .blog-container {
-  display: flex;
+	display: flex;
 }
 
 .blog-container section {
-  border-right: 1px solid lightgrey;
-  flex: 0 0 65%;
-  padding: 2rem 2rem 0 0;
+	border-right: 1px solid lightgrey;
+	flex: 0 0 65%;
+	padding: 2rem 2rem 0 0;
 }
 
 .post-summary {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .post-summary p:first-child {
-  color: #a0a0a0;
-  font-size: 14px;
-  font-weight: lighter;
-  margin-bottom: 1rem;
+	color: #a0a0a0;
+	font-size: 14px;
+	font-weight: lighter;
+	margin-bottom: 1rem;
 }
 
 .post-summary .content p {
-  color: #333;
-  font-size: 18px;
-  font-weight: lighter;
-  margin-bottom: 1rem;
+	color: #333;
+	font-size: 18px;
+	font-weight: lighter;
+	margin-bottom: 1rem;
 }
 
 .post-summary h2 {
-  margin-bottom: .5rem;
+	margin-bottom: .5rem;
 }
 
 aside {
-  flex: 0 0 35%;
-  padding: 2em 2em 0;
-  text-align: center;
+	flex: 0 0 35%;
+	padding: 2em 2em 0;
+	text-align: center;
 }
 
 aside h3 {
-  font-size: 20px;
-  margin: 1em auto;
+	font-size: 20px;
+	margin: 1em auto;
 }
-
 
 /* ***********************************
 MEDIA QUERIES
 *********************************** */
 @media (max-width: 991px) {
-  .blog-container {
-    display: block;
-  }
+	.blog-container {
+		display: block;
+	}
 
-  .blog-container section {
-    border-right: none;
-    padding-right: 0;
-  }
+	.blog-container section {
+		border-right: none;
+		padding-right: 0;
+	}
 
-  .post-summary:last-child {
-    border-bottom: 1px solid lightgrey;
-    margin-bottom: 0;
-    padding-bottom: 3em;
-  }
+	.post-summary:last-child {
+		border-bottom: 1px solid lightgrey;
+		margin-bottom: 0;
+		padding-bottom: 3em;
+	}
 
-  aside {
-    padding-top: 3em;
-    margin: auto;
-    width: 90%;
-  }
+	aside {
+		padding-top: 3em;
+		margin: auto;
+		width: 90%;
+	}
 }
 
 /* Microsoft Lumia 550 */
 @media (max-width: 640px) {
-  aside {
-    padding: 3em 0;
-    width: 100%;
-  }
+	aside {
+		padding: 3em 0;
+		width: 100%;
+	}
 }
 
 /* iPhone4 */
 @media (max-width: 320px) {
-  .post-summary h2 {
-    font-size: 22px;
-  }
+	.post-summary h2 {
+		font-size: 22px;
+	}
 
-  .post-summary p {
-    font-size: 16px;
-  }
+	.post-summary p {
+		font-size: 16px;
+	}
 }
