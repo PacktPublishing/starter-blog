@@ -378,7 +378,6 @@ Don't forget to
 ## #SectionSix
 ## Contenful - Content Infrastructure
 
-## #Contentful - Content Infrastructure
 ## What is Contentful?
 **What was covered in this section:**
 - What a CMS is and the different types of CMSs
