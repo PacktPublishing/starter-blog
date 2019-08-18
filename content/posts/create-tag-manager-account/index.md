@@ -18,9 +18,13 @@ After you click either of those, you’ll find yourself on the `admin/accounts/c
 - Country: this should automatically default to the country you are in but confirm and change if needed.
 - Share data anonymously with Google and others: check this box if this is something you are okay with doing, otherwise leave unchecked.
 
+![Account Setup](./account-setup.png)
+
 **Container Setup:**
 - Container name: Just like when we set up GA, I’m simply adding a placeholder domain until we have a real one in section when we deploy our site. I’ve used the same placeholder I used in GA: `www.mywebsite.com`.
 - Target Platform: select the target platform you’ll be using. For the ‘Hands-On Web Development with React and GatsbyJS’ select `Web`.
+
+![Container SetUp](./container-setup.png)
 
 Click the `Create` button in the bottom left.
 
@@ -37,4 +41,10 @@ Great, that’s account creation complete. Let’s move onto the next step where
 This step will be easy and brief as there are only 2 things we need to do:
 
 Copy the GTM ID from the bar along the top of your screen from the TM dashboard.
+
+![Tag Manager ID](./tm-id.png)
+
 Go to your 'gatsby-config' file, scroll down to where we added the `gatsby-plugin-googletagmanager` and paste that ID into the `id` field.
+
+![Update Config](./update-config.png)
+
