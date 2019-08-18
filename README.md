@@ -405,7 +405,7 @@ Don't forget to
 
 ## Updating gatsby-node with a Contentful query
 **What was covered in this section:**
-- Visting the playground to inspect our new query
+- Visiting the playground to inspect our new query
 - Removing content we no longer need in our app
 - Making the necessary changes in gatsby-node
 
