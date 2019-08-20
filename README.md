@@ -6,6 +6,7 @@ ___Created by Rachelle Rathbone___.
 - [Section 2: Querying Data with GraphQL](#sectiontwo)
 - [Section 3: Gatsby Plugins](#sectionthree)
 - [Section 4: Programmatically Creating Pages](#sectionfour)
+- [Section 5: Working with Images in Gatsby](#sectionfive)
 
 ## #SectionOne
 ### What is GatsbyJS?
@@ -153,9 +154,9 @@ query {
 
 ### Welcome to the Gatsby Plugin Library
 **What was covered in this section:**
-- Introducing the Gatsby plugin library.
-- Exploring other plugin options.
-- Installing some more plugins for us to use in our app.
+- Introducing the Gatsby Plugin Library.
+- Installing more plugins to use in our app.
+- Updating our config.
 
 **Resources:**
 - [Plugin Library](https://www.gatsbyjs.org/plugins/)
@@ -332,3 +333,135 @@ temporarily adding hardcoded props
   </li>
 </ul>
 ```
+
+## #SectionFive
+## Working with Images in Gatsby
+
+**Before we start**...
+Don't forget to
+
+### Importing Files with GraphQL
+**What was covered in this section:**
+- Importing an image the regular way.
+- Installing image plugins and writing a GraphQL query to allow us to access our images.
+- Updating our index file to consume the image from our data
+
+**Resources:**
+- Install [gatsby-transformer-sharp](https://www.gatsbyjs.org/packages/gatsby-transformer-sharp/) and [gatsby-plugin-sharp](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/)
+
+### Using Gatsby Image
+**What was covered in this section:**
+- Installing Gatsby Image - an image component.
+- Why Gatsby Image is an important tool for image optimization.
+- Updating our index file to use the Image component.
+
+**Resources:**
+- Install [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
+
+### Adding Images to Our Markdown Files
+**What was covered in this section:**
+- Adding images to markdown files.
+- Installing a plugin that will allow us to successfully display images in markdown files.
+- Updating our config and setting some options for our plugin.
+
+**Resources:**
+- Install [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/) so that you can display images from markdown files.
+
+### Adding Videos to Our App
+**What was covered in this section:**
+- Installing the gatsby-remark-responsive-iframe that will wrap any videos we install in a container.
+- Creating a new post and markdown file.
+- Add an iframe with YouTube link to our file and testing it out in the browser.
+
+**Resources:**
+- Install [gatsby-remark-responsive-iframe](https://www.gatsbyjs.org/packages/gatsby-remark-responsive-iframe/) to allow you to embed YouTube videos in your markdown files.
+
+
+## #Contentful - Content Infrastructure
+## What is Contentful?
+**What was covered in this section:**
+- What a CMS is and the different types of CMSs
+- Pros and cons of traditional and headless CMSs
+- How Contentful is different from its competitors
+
+## Creating a Contentful account
+**What was covered in this section:**
+- Creating a Contentful account
+- Adding fields to our content model
+- Adding some content to our space
+
+**Resources:**
+- [Contentful account creation](https://app.contentful.com)
+
+## Connecting Gatsby to Contentful
+**What was covered in this section:**
+- Installing the necessary plugins to work with Contentful data with Gatsby
+- Adding our Contentful spaceId and accessToken
+- Implementing a .env file to make our app more secure
+
+**Resources:**
+- The [source plugin](https://www.gatsbyjs.org/packages/gatsby-source-contentful/) we need to communicate with Contentful.
+- To render rich text you'll need this [npm package](https://www.npmjs.com/package/@contentful/rich-text-react-renderer).
+
+## Updating gatsby-node with a Contentful query
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+
+## Updating our app to consume posts from Contentful
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+
+
+## #Deploying Your App
+## Deploying and Hosting
+**What was covered in this section:**
+- Looking at our deployment options
+- Why Netlify?
+- Discussing the option to add pathPrefix
+
+**Resources:**
+-
+
+## Creating a Netlify Account
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+- Sign up for a [Netlify Account](https://app.netlify.com/signup)
+
+## Linking to your repository
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+## Building and deploying your web app
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+## Upping the game with Gatsby Preview
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
