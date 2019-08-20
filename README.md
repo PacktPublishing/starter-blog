@@ -7,6 +7,8 @@ ___Created by Rachelle Rathbone___.
 - [Section 3: Gatsby Plugins](#sectionthree)
 - [Section 4: Programmatically Creating Pages](#sectionfour)
 - [Section 5: Working with Images in Gatsby](#sectionfive)
+- [Section 6: Contentful - Content Infrastructure](#sectionsix)
+- [Section 5: Working with Images in Gatsby](#sectionseven)
 
 ## #SectionOne
 ### What is GatsbyJS?
@@ -374,7 +376,9 @@ Don't forget to
 - Install [gatsby-remark-responsive-iframe](https://www.gatsbyjs.org/packages/gatsby-remark-responsive-iframe/) to allow you to embed YouTube videos in your markdown files.
 
 
-## #Contentful - Content Infrastructure
+## #SectionSix
+## Contenful - Content Infrastructure
+
 ## What is Contentful?
 **What was covered in this section:**
 - What a CMS is and the different types of CMSs
@@ -402,50 +406,43 @@ Don't forget to
 
 ## Updating gatsby-node with a Contentful query
 **What was covered in this section:**
--
--
--
-
-**Resources:**
+- Visiting the playground to inspect our new query
+- Removing content we no longer need in our app
+- Making the necessary changes in gatsby-node
 
 ## Updating our app to consume posts from Contentful
 **What was covered in this section:**
--
--
--
-
-**Resources:**
+- Updating our index file to render content from Contentful
+- Making some minor changes to render most of our fields from Contentful
+- Using @contentful/rich-text-types, @contentful/rich-text-react-renderer', and documentToReactComponents to render our rich text
 
 
+## #SectionSix
 ## #Deploying Your App
+
 ## Deploying and Hosting
 **What was covered in this section:**
 - Looking at our deployment options
 - Why Netlify?
 - Discussing the option to add pathPrefix
 
-**Resources:**
--
-
 ## Creating a Netlify Account
 **What was covered in this section:**
--
--
--
+- Creating your netlify account
+- Setting up an empty repository in Github
+- Updating the remote to point at your own repo
 
 **Resources:**
 - Sign up for a [Netlify Account](https://app.netlify.com/signup)
 
-## Linking to your repository
+## Linking to your repository and deploying your web app
 **What was covered in this section:**
--
--
--
+- Connecting your repository to Netlify
+- Deploying your app
+- Checking out your production site!
 
-**Resources:**
--
 
-## Building and deploying your web app
+## Editing your domain name and updating our app
 **What was covered in this section:**
 -
 -
