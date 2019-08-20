@@ -8,6 +8,7 @@ ___Created by Rachelle Rathbone___.
 - [Section 4: Programmatically Creating Pages](#sectionfour)
 - [Section 5: Working with Images in Gatsby](#sectionfive)
 - [Section 6: Contentful - Content Infrastructure](#sectionsix)
+- [Section 7: Working with Images in Gatsby](#sectionseven)
 
 ## #SectionOne
 ### What is GatsbyJS?
@@ -416,3 +417,45 @@ Don't forget to
 - Using @contentful/rich-text-types, @contentful/rich-text-react-renderer', and documentToReactComponents to render our rich text
 
 
+## #SectionSix
+## #Deploying Your App
+
+## Deploying and Hosting
+**What was covered in this section:**
+- Looking at our deployment options
+- Why Netlify?
+- Discussing the option to add pathPrefix
+
+## Creating a Netlify Account
+**What was covered in this section:**
+- Creating your netlify account
+- Setting up an empty repository in Github
+- Updating the remote to point at your own repo
+
+**Resources:**
+- Sign up for a [Netlify Account](https://app.netlify.com/signup)
+
+## Linking to your repository and deploying your web app
+**What was covered in this section:**
+- Connecting your repository to Netlify
+- Deploying your app
+- Checking out your production site!
+
+
+## Editing your domain name and updating our app
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
+
+## Upping the game with Gatsby Preview
+**What was covered in this section:**
+-
+-
+-
+
+**Resources:**
+-
