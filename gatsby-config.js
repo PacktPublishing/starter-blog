@@ -34,7 +34,10 @@ module.exports = {
 							maxWidth: 590
 						}
 					},
-					`gatsby-remark-responsive-iframe`
+					`gatsby-remark-responsive-iframe`,
+					`gatsby-remark-prismjs`,
+					`gatsby-remark-smartypants`,
+					`gatsby-remark-copy-linked-files`
 				]
 			}
 		},

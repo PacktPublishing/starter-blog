@@ -1,28 +1,40 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 // Components
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+const options = {
+	renderMark: {
+		[MARKS.BOLD]: (text) => <b>{text}</b>,
+		[MARKS.CODE]: (text) => <i>{text}</i>
+	},
+	renderNode: {
+		[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
+		[BLOCKS.DOCUMENT]: (node, children) => <div>{children}</div>,
+		[BLOCKS.EMBEDDED_ASSET]: (node) => {
+			const { description, file } = node.data.target.fields;
+
+			return <img alt={description ? description['en-US'] : null} src={file['en-US'].url} />;
+		}
+	}
+};
+
 class PostTemplate extends React.Component {
 	render() {
-		const content = this.props.data.contentfulPosts;
-		const { title, subtitle, description, date, slug, childContentfulPostsContentRichTextNode } = content;
+		const postContent = this.props.data.contentfulPosts;
+		const { title, subtitle, description, date, slug, content } = postContent;
 		const { previous, next } = this.props.pageContext;
 
 		return (
 			<Layout title={title} subtitle={subtitle}>
-				<SEO title={title} description={description} />
+				<SEO title={title} description={description} slug={slug} />
 				<section className="posts">
 					<p className="date">{date}</p>
-					{childContentfulPostsContentRichTextNode.json.content.map((postContent) => {
-						postContent.content.map((type) => {
-							return <div dangerouslySetInnerHTML={{ __html: type.value }} />;
-						});
-					})}
-
-					{/* <div dangerouslySetInnerHTML={{ __html: post }} /> */}
+					{content && documentToReactComponents(content.json, options)}
 					<ul>
 						<li className="post-navigation">
 							{previous && (
@@ -53,9 +65,9 @@ export const pageQuery = graphql`
 			title
 			subtitle
 			description
-			slug
 			date(formatString: "MMMM DD, YYYY")
-			childContentfulPostsContentRichTextNode {
+			slug
+			content {
 				json
 			}
 		}

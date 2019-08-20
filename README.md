@@ -377,6 +377,9 @@ Don't forget to
 - Install [gatsby-remark-responsive-iframe](https://www.gatsbyjs.org/packages/gatsby-remark-responsive-iframe/) to allow you to embed YouTube videos in your markdown files.
 
 
+## #SectionSix
+## Contenful - Content Infrastructure
+
 ## #Contentful - Content Infrastructure
 ## What is Contentful?
 **What was covered in this section:**
