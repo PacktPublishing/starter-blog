@@ -2,6 +2,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	padding: 2em 2em 1em 2em;
+	position: relative;
 }
 
 header {
@@ -32,6 +33,12 @@ footer {
 	margin-top: 1em;
 }
 
+.homeLinkContainer {
+	max-width: 20px;
+}
+
+.homeLink {
+}
 /* ***********************************
 MEDIA QUERIES
 *********************************** */
