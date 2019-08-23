@@ -32,6 +32,10 @@ footer {
 	margin-top: 1em;
 }
 
+.homeLinkContainer {
+	max-width: 20px;
+}
+
 /* ***********************************
 MEDIA QUERIES
 *********************************** */
