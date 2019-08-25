@@ -11,6 +11,7 @@ module.exports = {
 		subtitle: `Built with React and Gatsby`,
 		author: `Rachelle Rathbone`,
 		description: `A blog that shows you the awesome power of gatsby.`,
+		bio: `Teacher turned engineer, Rachelle is a software engineer and mother of one, with a killer Australian accent.`,
 		social: {
 			twitter: `coding_love`
 		},

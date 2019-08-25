@@ -9,7 +9,7 @@ import SEO from '../components/seo';
 class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
-		const { title, subtitle, author } = data.site.siteMetadata;
+		const { title, subtitle, author, bio } = data.site.siteMetadata;
 		const posts = data.allContentfulPosts.edges;
 		const profilePic = data.profilePic.childImageSharp.fluid;
 
@@ -39,11 +39,7 @@ class BlogIndex extends React.Component {
 					<aside>
 						<Img fluid={profilePic} alt={`Author ${author}`} />
 						<h3>{author}</h3>
-						<p>
-							Goat gouda who moved my cheese. Red leicester edam port-salut cream cheese pepper jack
-							halloumi jarlsberg mozzarella. Boursin cheese strings manchego bocconcini croque monsieur
-							cheese slices the big cheese fromage.
-						</p>
+						<p>{bio}</p>
 					</aside>
 				</div>
 			</Layout>
@@ -59,6 +55,7 @@ export const pageQuery = graphql`
 			siteMetadata {
 				title
 				author
+				bio
 			}
 		}
 		profilePic: file(absolutePath: { regex: "/profile-pic.png/" }) {
