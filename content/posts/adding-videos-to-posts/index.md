@@ -25,9 +25,8 @@ plugins: [
 3. Select your YouTube video. I'll be using a presenation video created by [Packt Publishing](https://www.packtpub.com/). If you've never heard of them you should totally check them out.
 
 4. Add the following to your markdown file in your location of choice, replacing the url of course:
-```
-<iframe src="https://www.youtube.com/embed/NrOzIRHLvCU" width="600" height="400"></iframe>
-```
+
+<iframe src="" width="600" height="400"></iframe>
 
 5. Check out the video in your app. Voila! Easy stuff.
 
