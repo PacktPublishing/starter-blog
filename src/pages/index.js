@@ -13,7 +13,7 @@ import { shorten } from '../utils/truncateStr';
 class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
-		const { title, author } = data.site.siteMetadata;
+		const { title, author, bio } = data.site.siteMetadata;
 		const posts = data.allMarkdownRemark.edges;
 		const profilePic = data.profilePic.childImageSharp.fluid;
 
@@ -43,11 +43,7 @@ class BlogIndex extends React.Component {
 					<aside>
 						<Img fluid={profilePic} alt={`Author ${author}`} />
 						<h3>{author}</h3>
-						<p>
-							Goat gouda who moved my cheese. Red leicester edam port-salut cream cheese pepper jack
-							halloumi jarlsberg mozzarella. Boursin cheese strings manchego bocconcini croque monsieur
-							cheese slices the big cheese fromage.
-						</p>
+						<p>{bio}</p>
 					</aside>
 				</div>
 			</Layout>
@@ -63,6 +59,7 @@ export const pageQuery = graphql`
 			siteMetadata {
 				title
 				author
+				bio
 			}
 		}
 		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
