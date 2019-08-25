@@ -26,7 +26,7 @@ plugins: [
 
 4. Add the following to your markdown file in your location of choice, replacing the url of course:
 
-<iframe src="" width="600" height="400"></iframe>
+<iframe src="https://www.youtube.com/embed/K_0CAlXllFI" width="600" height="400"></iframe>
 
 5. Check out the video in your app. Voila! Easy stuff.
 
