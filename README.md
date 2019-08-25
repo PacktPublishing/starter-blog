@@ -445,20 +445,17 @@ Don't forget to
 - Checking out your production site!
 
 
-## Editing your domain name and updating our app
+## Updating our app
 **What was covered in this section:**
--
--
--
-
-**Resources:**
--
+- Editing URLs to point to your production site
+- Adding a link from our posts to our home page
+- Deploying our changes
 
 ## Upping the game with Gatsby Preview
 **What was covered in this section:**
--
--
--
+- Let's talk about Gatsby Preview
+- Creating a trial account
+- Witnessing the awesome power of live updates in action!
 
 **Resources:**
 -
