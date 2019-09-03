@@ -7,23 +7,25 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-// const options = {
-// 	renderMark: {
-// 		[MARKS.BOLD]: (text) => <b>{text}</b>,
-// 		[MARKS.CODE]: (text) => <i>{text}</i>
-// 	},
-// 	renderNode: {
-// 		[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
-// 		[BLOCKS.DOCUMENT]: (node, children) => <div>{children}</div>,
-// 		[BLOCKS.EMBEDDED_ASSET]: (node) => {
-// 			console.log(node.data.target.fields);
+const options = {
+	renderMark: {
+		[MARKS.BOLD]: (text) => <b>{text}</b>,
+		[MARKS.CODE]: (text) => <i>{text}</i>
+	},
+	renderNode: {
+		[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
+		[BLOCKS.DOCUMENT]: (node, children) => <div>{children}</div>,
+		[BLOCKS.EMBEDDED_ASSET]: (node) => {
+			if (node.data.target.fields) {
+				const { description, file } = node.data.target.fields;
 
-// 			const { description, file } = node.data.target.fields;
-
-// 			return <img alt={description ? description['en-US'] : null} src={file['en-US'].url} />;
-// 		}
-// 	}
-// };
+				return <img alt={description ? description['en-US'] : null} src={file['en-US'].url} />;
+			} else {
+				return null;
+			}
+		}
+	}
+};
 
 class PostTemplate extends React.Component {
 	render() {
