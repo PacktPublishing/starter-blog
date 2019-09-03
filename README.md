@@ -420,7 +420,7 @@ Don't forget to
 - Using @contentful/rich-text-types, @contentful/rich-text-react-renderer', and documentToReactComponents to render our rich text
 
 
-## #SectionSix
+## #SectionSeven
 ## #Deploying Your App
 
 ## Deploying and Hosting
@@ -444,8 +444,7 @@ Don't forget to
 - Deploying your app
 - Checking out your production site!
 
-
-## Updating our app
+## Updating your app
 **What was covered in this section:**
 - Editing URLs to point to your production site
 - Adding a link from our posts to our home page
@@ -458,4 +457,4 @@ Don't forget to
 - Witnessing the awesome power of live updates in action!
 
 **Resources:**
--
+- Sign up for a trial [Gatsby Preview](https://www.gatsbyjs.com/preview/?_ga=2.247753282.434136941.1566685256-583926311.1555288326) account.
