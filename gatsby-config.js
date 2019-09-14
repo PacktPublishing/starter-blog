@@ -1,3 +1,9 @@
+const dotenv = require('dotenv');
+
+if (process.env.NODE_ENV !== 'production') {
+	dotenv.config();
+}
+
 module.exports = {
 	siteMetadata: {
 		title: `Starter Blog`,
@@ -103,6 +109,14 @@ module.exports = {
 				xMargin: 24, // Edge margin used when x value is not set
 				yMargin: 24 // Edge margin used when y value is not set
 			}
-		}
+		},
+		{
+			resolve: `gatsby-source-contentful`,
+			options: {
+				spaceId: '96jx7c9accmr',
+				accessToken: 'Q6YLwqqbGkRvjsm4jC-fPauSzVXrS8y0kfWUJuGaQi4'
+			}
+		},
+		`@contentful/gatsby-transformer-contentful-richtext`
 	]
 };
