@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
