@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -6,11 +7,14 @@ import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+// Utils
+import { shorten } from '../utils/truncateStr';
+
 class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
-		const { title, author, bio } = data.site.siteMetadata;
-		const posts = data.allContentfulPosts.edges;
+		const { title, author } = data.site.siteMetadata;
+		const posts = data.allMarkdownRemark.edges;
 		const profilePic = data.profilePic.childImageSharp.fluid;
 
 		return (
@@ -18,27 +22,32 @@ class BlogIndex extends React.Component {
 				<SEO title="All posts" />
 				<div className="blog-container">
 					<section>
-						{posts.map(
-							(post) =>
-								post.node.content && (
-									<div className="post-summary" key={post.node.title}>
-										<p>{post.node.date}</p>
-										<h2>{post.node.title}</h2>
-										<p>{post.node.description}</p>
-
-										<Link to={post.node.slug}>
-											<button data-gtm="read-more" id={`data::${post.node.slug}`}>
-												Read more
-											</button>
-										</Link>
-									</div>
-								)
-						)}
+						{posts.map((post, index) => {
+							return (
+								<div className="post-summary" key={index}>
+									<p>{post.node.frontmatter.date}</p>
+									<h2>{post.node.frontmatter.title}</h2>
+									<div
+										className="content"
+										dangerouslySetInnerHTML={{ __html: shorten(post.node.html, 200) }}
+									/>
+									<Link to={post.node.fields.slug}>
+										<button data-gtm="read-more" id={`data::${post.node.fields.slug}`}>
+											Read more
+										</button>
+									</Link>
+								</div>
+							);
+						})}
 					</section>
 					<aside>
 						<Img fluid={profilePic} alt={`Author ${author}`} />
 						<h3>{author}</h3>
-						<p>{bio}</p>
+						<p>
+							Goat gouda who moved my cheese. Red leicester edam port-salut cream cheese pepper jack
+							halloumi jarlsberg mozzarella. Boursin cheese strings manchego bocconcini croque monsieur
+							cheese slices the big cheese fromage.
+						</p>
 					</aside>
 				</div>
 			</Layout>
@@ -54,18 +63,20 @@ export const pageQuery = graphql`
 			siteMetadata {
 				title
 				author
-				bio
 			}
 		}
-		allContentfulPosts(sort: { fields: [date], order: DESC }) {
+		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
 			edges {
 				node {
-					title
-					description
-					date(formatString: "MMMM DD, YYYY")
-					slug
-					content {
-						json
+					excerpt
+					fields {
+						slug
+					}
+					html
+					frontmatter {
+						date(formatString: "MMMM DD, YYYY")
+						title
+						description
 					}
 				}
 			}

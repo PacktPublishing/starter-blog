@@ -1,20 +1,8 @@
-const dotenv = require('dotenv');
-
-if (process.env.NODE_ENV !== 'production') {
-	dotenv.config();
-}
-
-const contentfulConfig = {
-	spaceId: process.env.CONTENTFUL_SPACE_ID,
-	accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
-};
-
 module.exports = {
 	siteMetadata: {
 		title: `Starter Blog`,
 		author: `Rachelle Rathbone`,
 		description: `A blog that shows you the awesome power of gatsby.`,
-		bio: `Teacher turned engineer, Rachelle is a software engineer and mother of one, with a killer Australian accent.`,
 		social: {
 			twitter: `coding_love`
 		},
@@ -26,6 +14,13 @@ module.exports = {
 			options: {
 				path: `${__dirname}/content/assets`,
 				name: `assets`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				path: `${__dirname}/content/posts`,
+				name: `blogPosts`
 			}
 		},
 		{
@@ -107,10 +102,6 @@ module.exports = {
 				xMargin: 24, // Edge margin used when x value is not set
 				yMargin: 24 // Edge margin used when y value is not set
 			}
-		},
-		{
-			resolve: `gatsby-source-contentful`,
-			options: contentfulConfig
 		}
 	]
 };
