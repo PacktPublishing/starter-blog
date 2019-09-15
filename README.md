@@ -419,6 +419,9 @@ Don't forget to
 - Making some minor changes to render most of our fields from Contentful
 - Using @contentful/rich-text-types, @contentful/rich-text-react-renderer', and documentToReactComponents to render our rich text
 
+**Resources:**
+- [@contentful-rich-text-react-renderer](https://www.contentful.com/developers/docs/javascript/tutorials/rendering-contentful-rich-text-with-javascript/) docs.
+
 
 ## #SectionSeven
 ## #Deploying Your App
