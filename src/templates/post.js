@@ -38,7 +38,7 @@ class PostTemplate extends React.Component {
 				<SEO title={title} description={description} slug={slug} />
 				<section className="posts">
 					<p className="date">{date}</p>
-					{/* {content && documentToReactComponents(content.json, options)} */}
+					{content && documentToReactComponents(content.json, options)}
 					<ul>
 						<li className="post-navigation">
 							{previous && (
