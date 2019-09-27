@@ -22,13 +22,13 @@ function Layout({ title, subtitle, children }) {
 
 	return (
 		<div className="app-container">
-			<div className="homeLinkContainer">
+			{/* <div className="homeLinkContainer">
 				{title !== 'Starter Blog' && (
 					<Link to="/">
 						<Img fluid={homeIcon} alt="Link to go to home page" />
 					</Link>
 				)}
-			</div>
+			</div> */}
 			<header>
 				<h1>{title}</h1>
 				<p>{subtitle}</p>
