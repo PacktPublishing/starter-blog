@@ -67,7 +67,7 @@ function SEO({ description, lang, meta, title, slug }) {
 				},
 				{
 					name: `twitter:image`,
-					content: `${site.siteMetadata.siteUrl}/WILLUPDATELATER/twitter-card.jpg`
+					content: `${twitterCardUrl}`
 				}
 			].concat(meta)}
 		/>
