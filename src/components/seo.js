@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, title }) {
-	const { site } = useStaticQuery(
+function SEO({ description, lang, meta, title, slug }) {
+	const { site, contentfulPosts } = useStaticQuery(
 		graphql`
 			query {
 				site {
@@ -18,6 +18,13 @@ function SEO({ description, lang, meta, title }) {
 		`
 	);
 	const metaDescription = description || site.siteMetadata.description;
+	let twitterCardUrl = '';
+
+	if (slug === '/') {
+		twitterCardUrl = `${site.siteMetadata.siteUrl}/twitter-card.jpg`;
+	} else {
+		twitterCardUrl = `${site.siteMetadata.siteUrl}/${slug}/twitter-card.jpg`;
+	}
 
 	return (
 		<Helmet
@@ -60,7 +67,7 @@ function SEO({ description, lang, meta, title }) {
 				},
 				{
 					name: `twitter:image`,
-					content: `${site.siteMetadata.siteUrl}'WILLADDPATHLATER'twitter-card.jpg`
+					content: `${twitterCardUrl}`
 				}
 			].concat(meta)}
 		/>
