@@ -5,13 +5,13 @@
   "version": "0.1.0",
   "author": "Rachelle Rathbone",
   "dependencies": {
-    "gatsby": "^2.3.25",
-    "gatsby-plugin-manifest": "^2.0.29",
-    "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-typography": "^2.2.13",
-    "gatsby-source-filesystem": "^2.0.36",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "gatsby": "^2.15.28",
+    "gatsby-plugin-manifest": "^2.2.20",
+    "gatsby-plugin-offline": "^2.2.10",
+    "gatsby-plugin-typography": "^2.3.10",
+    "gatsby-source-filesystem": "^2.1.28",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.19",
     "typeface-merriweather": "0.0.72",
@@ -19,7 +19,7 @@
     "typography": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
