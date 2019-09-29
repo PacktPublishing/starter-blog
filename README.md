@@ -460,4 +460,4 @@ Don't forget to
 - Witnessing the awesome power of live updates in action!
 
 **Resources:**
-- Sign up for a trial [Gatsby Preview](https://www.gatsbyjs.com/preview/?_ga=2.247753282.434136941.1566685256-583926311.1555288326) account.
+- Sign up for a trial [Gatsby Preview](https://www.gatsbyjs.com/dashboard/login) account.
