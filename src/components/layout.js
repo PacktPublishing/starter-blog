@@ -39,7 +39,7 @@ function Layout({ title, subtitle, children }) {
 	);
 }
 
-Layout.propTypes = { 
+Layout.propTypes = {
 	title: PropTypes.string.isRequired,
 	subtitle: PropTypes.string.isRequired,
 	children: PropTypes.node.isRequired
