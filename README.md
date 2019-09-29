@@ -110,9 +110,9 @@ ___Created by Rachelle Rathbone___.
 
 ### Querying data in pages with GraphQL
 **What was covered in this section:**
-- import GraphQL and add our query to our index file
-- pass that data into into our component and check out the data in the console
-- update some of our content to use our data
+- Import GraphQL and add our query to our index file
+- Pass that data into into our component and check out the data in the console
+- Update some of our content to use our data
 
 **Our query from the first video:**
 ```
@@ -135,7 +135,7 @@ query {
 ### Updating seo.js with useStaticQuery hook
 **What was covered in this section:**
 - Comparing the StaticQuery component to the useStaticQuery hook.
-- Configuring seo.js with our useStaticQuery hook
+- Configuring seo.js with our useStaticQuery hook.
 - Updating seo.js to consume data from our GraphQL query.
 
 ## #SectionThree
@@ -180,6 +180,9 @@ query {
 - What social cards are used for.
 - Installing the gatsby-remark-social-cards plugin and updating our config.
 - Making some more changes to our seo.js to include social card metadata.
+
+**Resouces:**
+- Install [gatsby-plugin-social-cards](https://www.gatsbyjs.org/packages/gatsby-remark-social-cards/) to increase click rates.
 
 **Options for your social card plugin config:**
 ```
@@ -374,50 +377,6 @@ Don't forget to
 
 **Resources:**
 - Install [gatsby-remark-responsive-iframe](https://www.gatsbyjs.org/packages/gatsby-remark-responsive-iframe/) to allow you to embed YouTube videos in your markdown files.
-
-
-## #SectionSix
-## Contenful - Content Infrastructure
-
-## What is Contentful?
-**What was covered in this section:**
-- What a CMS is and the different types of CMSs
-- Pros and cons of traditional and headless CMSs
-- How Contentful is different from its competitors
-
-## Creating a Contentful account
-**What was covered in this section:**
-- Creating a Contentful account
-- Adding fields to our content model
-- Adding some content to our space
-
-**Resources:**
-- [Contentful account creation](https://app.contentful.com)
-
-## Connecting Gatsby to Contentful
-**What was covered in this section:**
-- Installing the necessary plugins to work with Contentful data with Gatsby
-- Adding our Contentful spaceId and accessToken
-- Implementing a .env file to make our app more secure
-
-**Resources:**
-- The [source plugin](https://www.gatsbyjs.org/packages/gatsby-source-contentful/) we need to communicate with Contentful.
-- To render rich text you'll need this [npm package](https://www.npmjs.com/package/@contentful/rich-text-react-renderer).
-
-## Updating gatsby-node with a Contentful query
-**What was covered in this section:**
-- Visiting the playground to inspect our new query
-- Removing content we no longer need in our app
-- Making the necessary changes in gatsby-node
-
-## Updating our app to consume posts from Contentful
-**What was covered in this section:**
-- Updating our index file to render content from Contentful
-- Making some minor changes to render most of our fields from Contentful
-- Using @contentful/rich-text-types, @contentful/rich-text-react-renderer', and documentToReactComponents to render our rich text
-
-**Resources:**
-- [@contentful-rich-text-react-renderer](https://www.contentful.com/developers/docs/javascript/tutorials/rendering-contentful-rich-text-with-javascript/) docs.
 
 
 ## #SectionSix
