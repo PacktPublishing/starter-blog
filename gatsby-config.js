@@ -15,7 +15,7 @@ module.exports = {
 		social: {
 			twitter: `coding_love`
 		},
-		siteUrl: `https://dazzling-thompson-cbfe48.netlify.com`
+		siteUrl: `http://localhost:9000`
 	},
 	plugins: [
 		{

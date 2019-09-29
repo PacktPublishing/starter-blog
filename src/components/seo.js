@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title, slug }) {
-	const { site, contentfulPosts } = useStaticQuery(
+	const { site } = useStaticQuery(
 		graphql`
 			query {
 				site {
@@ -67,7 +67,7 @@ function SEO({ description, lang, meta, title, slug }) {
 				},
 				{
 					name: `twitter:image`,
-					content: `${twitterCardUrl}`
+					content: `${site.siteMetadata.siteUrl}/WILLUPDATELATER/twitter-card.jpg`
 				}
 			].concat(meta)}
 		/>
