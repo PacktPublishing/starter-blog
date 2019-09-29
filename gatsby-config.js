@@ -15,7 +15,7 @@ module.exports = {
 		social: {
 			twitter: `coding_love`
 		},
-		siteUrl: `http://localhost:9000`
+		siteUrl: `https://dazzling-thompson-cbfe48.netlify.com`
 	},
 	plugins: [
 		{
@@ -23,13 +23,6 @@ module.exports = {
 			options: {
 				path: `${__dirname}/content/assets`,
 				name: `assets`
-			}
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/content/posts`,
-				name: `blogPosts`
 			}
 		},
 		{
