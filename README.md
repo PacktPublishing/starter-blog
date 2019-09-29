@@ -110,9 +110,9 @@ ___Created by Rachelle Rathbone___.
 
 ### Querying data in pages with GraphQL
 **What was covered in this section:**
-- import GraphQL and add our query to our index file
-- pass that data into into our component and check out the data in the console
-- update some of our content to use our data
+- Import GraphQL and add our query to our index file
+- Pass that data into into our component and check out the data in the console
+- Update some of our content to use our data
 
 **Our query from the first video:**
 ```
@@ -135,7 +135,7 @@ query {
 ### Updating seo.js with useStaticQuery hook
 **What was covered in this section:**
 - Comparing the StaticQuery component to the useStaticQuery hook.
-- Configuring seo.js with our useStaticQuery hook
+- Configuring seo.js with our useStaticQuery hook.
 - Updating seo.js to consume data from our GraphQL query.
 
 ## #SectionThree
@@ -180,6 +180,9 @@ query {
 - What social cards are used for.
 - Installing the gatsby-remark-social-cards plugin and updating our config.
 - Making some more changes to our seo.js to include social card metadata.
+
+**Resouces:**
+- Install [gatsby-plugin-social-cards](https://www.gatsbyjs.org/packages/gatsby-remark-social-cards/) to increase click rates.
 
 **Options for your social card plugin config:**
 ```
@@ -420,7 +423,7 @@ Don't forget to
 - [@contentful-rich-text-react-renderer](https://www.contentful.com/developers/docs/javascript/tutorials/rendering-contentful-rich-text-with-javascript/) docs.
 
 
-## #SectionSix
+## #SectionSeven
 ## #Deploying Your App
 
 ## Deploying and Hosting
@@ -444,21 +447,17 @@ Don't forget to
 - Deploying your app
 - Checking out your production site!
 
-
-## Editing your domain name and updating our app
+## Updating your app
 **What was covered in this section:**
--
--
--
-
-**Resources:**
--
+- Editing URLs to point to your production site
+- Adding a link from our posts to our home page
+- Deploying our changes
 
 ## Upping the game with Gatsby Preview
 **What was covered in this section:**
--
--
--
+- Let's talk about Gatsby Preview
+- Creating a trial account
+- Witnessing the awesome power of live updates in action!
 
 **Resources:**
--
+- Sign up for a trial [Gatsby Preview](https://www.gatsbyjs.com/dashboard/login) account.
