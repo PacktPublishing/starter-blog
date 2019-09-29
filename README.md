@@ -10,6 +10,9 @@ ___Created by Rachelle Rathbone___.
 - [Section 6: Contentful - Content Infrastructure](#sectionsix)
 - [Section 7: Working with Images in Gatsby](#sectionseven)
 
+Hey everyone! Thanks for taking my Packt Publishing course! If you run into any issues while working your way through the sections feel free to ping me on twitter @coding_love or email me at gatsbystartblog@gmail.com. I'll do my best to respond to you as quickly as possible. Happy learning :)
+
+
 ## #SectionOne
 ### What is GatsbyJS?
 **What was covered in this section:**
