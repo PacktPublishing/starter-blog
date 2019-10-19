@@ -25,30 +25,7 @@ module.exports = {
 				name: `assets`
 			}
 		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				path: `${__dirname}/content/posts`,
-				name: `blogPosts`
-			}
-		},
-		{
-			resolve: `gatsby-transformer-remark`,
-			options: {
-				plugins: [
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							maxWidth: 590
-						}
-					},
-					`gatsby-remark-responsive-iframe`,
-					`gatsby-remark-prismjs`,
-					`gatsby-remark-smartypants`,
-					`gatsby-remark-copy-linked-files`
-				]
-			}
-		},
+
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{
@@ -84,32 +61,6 @@ module.exports = {
 			options: {
 				id: `GTM-NJ3SJD6`,
 				includeInDevelopment: true
-			}
-		},
-		{
-			resolve: `gatsby-remark-social-cards`,
-			options: {
-				title: {
-					field: 'title',
-					font: 'DejaVuSansCondensed',
-					color: 'black', // black|white
-					size: 48, // 16|24|32|48|64
-					style: 'bold', // normal|bold|italic
-					x: null, // Will default to xMargin
-					y: null // Will default to yMargin
-				},
-				meta: {
-					parts: [ '- ', { field: 'author' }, ' » ', { field: 'date', format: 'mmmm dS' } ],
-					font: 'DejaVuSansCondensed',
-					color: 'black', // black|white
-					size: 24, // 16|24|32|48|64
-					style: 'normal', // normal|bold|italic
-					x: null, // Will default to xMargin
-					y: null // Will default to cardHeight - yMargin - size
-				},
-				background: '#FFFFFF', // Background color for the card
-				xMargin: 24, // Edge margin used when x value is not set
-				yMargin: 24 // Edge margin used when y value is not set
 			}
 		},
 		{
