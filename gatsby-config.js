@@ -54,13 +54,8 @@ module.exports = {
 							},
 							background: '#FFFFFF', // Background color for the card
 							xMargin: 24, // Edge margin used when x value is not set
-							yMargin: 24 // Edge margin used when y value is not set
-						}
-					},
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							maxWidth: 590
+							yMargin: 24, // Edge margin used when y value is not set
+							authorName: 'Rachelle Rathbone'
 						}
 					}
 				]
