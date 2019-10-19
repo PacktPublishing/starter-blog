@@ -33,10 +33,6 @@ module.exports = {
 				pathToConfigModule: `src/utils/typography`
 			}
 		},
-		{
-			resolve: `gatsby-transformer-remark`,
-			options: {}
-		},
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-offline`
 	]
