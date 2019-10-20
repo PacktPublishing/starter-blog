@@ -1,6 +1,18 @@
 # Starter Blog
 ___Created by Rachelle Rathbone___.
 
+Hey everyone! Thanks for taking my Packt Publishing course! If you run into any issues while working your way through the sections feel free to ping me on twitter @coding_love or email me at gatsbystartblog@gmail.com. I'll do my best to respond to you as quickly as possible. Happy learning :)
+
+## Prerequisites
+* ReactJS: You should have at least a basic understanding of how React works. The focus of this course is GatsbyJS so while we'll be using React, I won't be covering any React specifics.
+* Node version 8 or higher installed: Gatsby supports any version of Node with a status of maintenance, active or current. Node V6 reached its end-of-life status in April 2019 so if you have this version or anything lower installed, Gatsby won’t run on your machine. 
+  * If you don't already have Node installed you'll need to follow the download instructions on the [nodejs site](https://nodejs.org/en/download/).
+  * If it is already installed, check the version by running `node -v` or `node --version`. For those of you 6 or earlier you'll need to do some googling on how to update to a later version. How you do that will vary depending on how it was installed. One tip I will give if you upgrade but then have trouble pointing your machine at the latest version:
+    * Install [Homebrew](https://docs.brew.sh/Installation) if you don't already have it.
+    * Run `brew install nvm. Nvm is a Node version manager which will make switching between node versions incredibly simple.
+    * Add a .nvmrc file to the root of your project and simply add the version number you wish to use to the file. For example, if you installed 10.6.0, in your .nvmrc file all you need to add is: `v10.16.0` 
+
+
 **Jump Ahead:**
 - [Section 1: Getting Started with Gatsby JS](#sectionone)
 - [Section 2: Querying Data with GraphQL](#sectiontwo)
@@ -9,8 +21,6 @@ ___Created by Rachelle Rathbone___.
 - [Section 5: Working with Images in Gatsby](#sectionfive)
 - [Section 6: Contentful - Content Infrastructure](#sectionsix)
 - [Section 7: Working with Images in Gatsby](#sectionseven)
-
-Hey everyone! Thanks for taking my Packt Publishing course! If you run into any issues while working your way through the sections feel free to ping me on twitter @coding_love or email me at gatsbystartblog@gmail.com. I'll do my best to respond to you as quickly as possible. Happy learning :)
 
 
 ## #SectionOne
