@@ -5,12 +5,12 @@ Hey everyone! Thanks for taking my Packt Publishing course! If you run into any 
 
 ## Prerequisites
 * ReactJS: You should have at least a basic understanding of how React works. The focus of this course is GatsbyJS so while we'll be using React, I won't be covering any React specifics.
-* Node version 8 or higher installed: Gatsby supports any version of Node with a status of maintenance, active or current. Node V6 reached its end-of-life status in April 2019 so if you have this version or anything lower installed, Gatsby won’t run on your machine. 
+* Node version 8 or higher installed: Gatsby supports any version of Node with a status of maintenance, active or current. Node V6 reached its end-of-life status in April 2019 so if you have this version or anything lower installed, Gatsby won’t run on your machine.
   * If you don't already have Node installed you'll need to follow the download instructions on the [nodejs site](https://nodejs.org/en/download/).
   * If it is already installed, check the version by running `node -v` or `node --version`. For those of you 6 or earlier you'll need to do some googling on how to update to a later version. How you do that will vary depending on how it was installed. One tip I will give if you upgrade but then have trouble pointing your machine at the latest version:
     * Install [Homebrew](https://docs.brew.sh/Installation) if you don't already have it.
     * Run `brew install nvm. Nvm is a Node version manager which will make switching between node versions incredibly simple.
-    * Add a .nvmrc file to the root of your project and simply add the version number you wish to use to the file. For example, if you installed 10.6.0, in your .nvmrc file all you need to add is: `v10.16.0` 
+    * Add a .nvmrc file to the root of your project and simply add the version number you wish to use to the file. For example, if you installed 10.6.0, in your .nvmrc file all you need to add is: `v10.16.0`
 
 
 **Jump Ahead:**
@@ -35,7 +35,7 @@ Hey everyone! Thanks for taking my Packt Publishing course! If you run into any 
 
 ### Installing Gatsby and cloning our Gatsby project
 **What was covered in this section:**
-* Installing Gatsby globally and cloning our Gatsby repository.
+* Installing Gatsby globally and cloning our [Gatsby repository](https://github.com/PacktPublishing/starter-blog).
 * A walkthrough of the structure of our application.
 * Running our app!
 
