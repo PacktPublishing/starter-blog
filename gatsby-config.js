@@ -1,3 +1,9 @@
+const dotenv = require(`dotenv`);
+
+if (process.env.NODE_ENV !== 'production') {
+	dotenv.config();
+}
+
 module.exports = {
 	siteMetadata: {
 		title: `Starter Blog`,
@@ -36,7 +42,33 @@ module.exports = {
 					`gatsby-remark-responsive-iframe`,
 					`gatsby-remark-prismjs`,
 					`gatsby-remark-smartypants`,
-					`gatsby-remark-copy-linked-files`
+					`gatsby-remark-copy-linked-files`,
+					{
+						resolve: `gatsby-remark-social-cards`,
+						options: {
+							title: {
+								field: 'title',
+								font: 'DejaVuSansCondensed',
+								color: 'black', // black|white
+								size: 48, // 16|24|32|48|64
+								style: 'bold', // normal|bold|italic
+								x: null, // Will default to xMargin
+								y: null // Will default to yMargin
+							},
+							meta: {
+								parts: [ '- ', { field: 'author' }, ' » ', { field: 'date', format: 'mmmm dS' } ],
+								font: 'DejaVuSansCondensed',
+								color: 'black', // black|white
+								size: 24, // 16|24|32|48|64
+								style: 'normal', // normal|bold|italic
+								x: null, // Will default to xMargin
+								y: null // Will default to cardHeight - yMargin - size
+							},
+							background: '#FFFFFF', // Background color for the card
+							xMargin: 24, // Edge margin used when x value is not set
+							yMargin: 24 // Edge margin used when y value is not set
+						}
+					}
 				]
 			}
 		},
@@ -78,29 +110,10 @@ module.exports = {
 			}
 		},
 		{
-			resolve: `gatsby-remark-social-cards`,
+			resolve: `gatsby-source-contentful`,
 			options: {
-				title: {
-					field: 'title',
-					font: 'DejaVuSansCondensed',
-					color: 'black', // black|white
-					size: 48, // 16|24|32|48|64
-					style: 'bold', // normal|bold|italic
-					x: null, // Will default to xMargin
-					y: null // Will default to yMargin
-				},
-				meta: {
-					parts: [ '- ', { field: 'author' }, ' » ', { field: 'date', format: 'mmmm dS' } ],
-					font: 'DejaVuSansCondensed',
-					color: 'black', // black|white
-					size: 24, // 16|24|32|48|64
-					style: 'normal', // normal|bold|italic
-					x: null, // Will default to xMargin
-					y: null // Will default to cardHeight - yMargin - size
-				},
-				background: '#FFFFFF', // Background color for the card
-				xMargin: 24, // Edge margin used when x value is not set
-				yMargin: 24 // Edge margin used when y value is not set
+				spaceId: ``,
+				accessToken: ``
 			}
 		}
 	]
