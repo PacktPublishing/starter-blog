@@ -3,7 +3,7 @@ ___Created by Rachelle Rathbone___.
 
 **IMPORTANT**
 ***********************
-Hey there all. I realized that Git had been caching my env file so it had been making it into my repo! When I removed it (run `git rm .env --cached` if you run into this issue), my Netlify deployment stopped working because it couldn't access my environment variables anymore. Make sure your .env file is greyed out as this is an indication it's being ignored by Git. Then head over to [Environment](https://app.netlify.com/sites/rachellerathbone/settings/deploys#environment) in Netlify once you have your account set up and add your environment variables there. Happy deploying :)
+Hey there all. I realized that Git had been caching my env file so it had been making it into my repo! When I removed it (run `git rm .env --cached` if you run into this issue), my Netlify deployment stopped working because it couldn't access my environment variables anymore. Make sure your .env file is greyed out as this is an indication it's being ignored by Git. Then head over to [Environment](https://app.netlify.com/sites/rachellerathbone/settings/deploys#environment) in Netlify once you have your account set up and [add your environment variables](https://www.rachellerathbone.com/netlify-environment-variables) there. Happy deploying :)
 ***********************
 
 ## #SectionSeven
