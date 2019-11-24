@@ -10,7 +10,7 @@ class BlogIndex extends React.Component {
 	render() {
 		const { data } = this.props;
 		const { title, subtitle, author, bio } = data.site.siteMetadata;
-		const posts = data.allContentfulPosts.edges;
+		const posts = data.allContentfulPost.edges;
 		const profilePic = data.profilePic.childImageSharp.fluid;
 
 		return (
@@ -66,7 +66,7 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		allContentfulPosts(sort: { fields: [date], order: DESC }) {
+		allContentfulPost(sort: { fields: [date], order: DESC }) {
 			edges {
 				node {
 					title

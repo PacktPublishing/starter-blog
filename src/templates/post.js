@@ -29,7 +29,7 @@ const options = {
 
 class PostTemplate extends React.Component {
 	render() {
-		const postContent = this.props.data.contentfulPosts;
+		const postContent = this.props.data.contentfulPost;
 		const { title, subtitle, description, date, slug, content } = postContent;
 		const { previous, next } = this.props.pageContext;
 
@@ -65,7 +65,7 @@ export default PostTemplate;
 
 export const pageQuery = graphql`
 	query Posts($slug: String!) {
-		contentfulPosts(slug: { eq: $slug }) {
+		contentfulPost(slug: { eq: $slug }) {
 			title
 			subtitle
 			description

@@ -8,7 +8,7 @@ exports.createPages = ({ graphql, actions }) => {
 	return graphql(
 		`
       {
-        allContentfulPosts(
+        allContentfulPost(
           sort: { fields: [date], order: DESC }
           limit: 1000
         ) {
@@ -32,12 +32,12 @@ exports.createPages = ({ graphql, actions }) => {
 			throw result.errors;
 		}
 
-		const posts = result.data.allContentfulPosts.edges;
+		const posts = result.data.allContentfulPost.edges;
 
 		posts.forEach((post, index) => {
 			const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-            const next = index === 0 ? null : posts[index - 1].node;
-            
+			const next = index === 0 ? null : posts[index - 1].node;
+
 			createPage({
 				path: post.node.slug,
 				component: blogPost,
