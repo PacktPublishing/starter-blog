@@ -10,7 +10,7 @@ import SEO from '../components/seo';
 const options = {
 	renderMark: {
 		[MARKS.BOLD]: (text) => <b>{text}</b>,
-		[MARKS.CODE]: (text) => <i>{text}</i>
+		[MARKS.CODE]: (text) => <code>{text}</code>
 	},
 	renderNode: {
 		[BLOCKS.PARAGRAPH]: (node, children) => <div>{children}</div>,
