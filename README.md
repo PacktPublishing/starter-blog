@@ -30,7 +30,7 @@ ___Created by Rachelle Rathbone___.
 * Other styling alternatives available in GatsbyJS
 
 **Resources:**
-* [typography.js](https://www.gatsbyjs.org/docs/typography-js/)
+* [typography.js](https://www.gatsbyjs.org/docs/using-typography-js/)
 * Learn more about [typography](https://kyleamathews.github.io/typography.js/).
 * More on [styling](https://www.gatsbyjs.org/tutorial/part-two/#css-in-js) with Gatsby.
 
